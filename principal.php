@@ -135,7 +135,7 @@
     <!-- Contenedor Footer -->
     <footer class="footer btn-warning">
         <div class="boxTextFooter ">
-            <p class="text-primary">@Copyright<a target="_blank" class="text-dark"> Hospital Básico El oro</a></p>
+            <p class="text-primary">@Copyright<a target="_blank" class="text-dark"> Hospital Básico El oro 2022</a></p>
         </div>
     </footer>
     <!-- Fin Contenedor Footer -->
