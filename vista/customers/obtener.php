@@ -7,16 +7,19 @@
 		$db = $database->open();
 		try{
 			$codpaci  = $_GET['codpaci'];
-			//$dnipa = $_POST['dnipa'];
+			$cedula = $_POST['cedula'];
 			$nombrep = $_POST['nombrep'];
 			$apellidop = $_POST['apellidop'];
-			$seguro = $_POST['seguro'];
-			$tele = $_POST['tele'];
 			$sexo = $_POST['sexo'];
+			$telefono = $_POST['telefono'];
+			$fechanaci = $_POST['fechanaci'];
+			$correo = $_POST['correo'];
+			$direccion = $_POST['direccion'];
+			$ciudad = $_POST['ciudad'];
 			$usuario = $_POST['usuario'];
 			
 			//$sql = "UPDATE customers SET dnipa = '$dnipa',nombrep = '$nombrep',apellidop = '$apellidop',seguro = '$seguro',tele = '$tele',sexo = '$sexo' ,usuario = '$usuario' WHERE codpaci = '$codpaci'";
-			$sql = "UPDATE paciente SET nombrep = '$nombrep',apellidop = '$apellidop',seguro = '$seguro',tele = '$tele',sexo = '$sexo' ,usuario = '$usuario' WHERE codpaci = '$codpaci'";
+			$sql = "UPDATE paciente SET cedula = '$cedula', nombrep = '$nombrep',apellidop = '$apellidop',sexo = '$sexo',telefono = '$telefono',fechanaci = '$fechanaci',correo = '$correo',direccion = '$direccion',ciudad = '$ciudad',usuario = '$usuario' WHERE codpaci = '$codpaci'";
 			//if-else statement in executing our query
 			$_SESSION['message'] = ( $db->exec($sql) ) ? 'Paciente actualizado correctamente' : 'No se puso actualizar el paciente';
 
