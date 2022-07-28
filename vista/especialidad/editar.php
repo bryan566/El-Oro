@@ -36,9 +36,10 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="form-group">
 							<label for="estado">Estado</label>
+
 							<select name="estado" id="estado" style="width:400px" class="custom-select" Required>
 								<option value="<?php echo $usuarios->gen_per ?>"> <?php
 																					if ($row['estado'] == 1) {
