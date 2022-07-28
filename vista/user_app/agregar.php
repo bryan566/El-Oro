@@ -16,13 +16,29 @@
 				
 		<form method="POST" autocomplete="off" enctype="multipart/form-data">
 					<div class="row">													
-						<div class="col-md-6">
+							<!--<div class="col-md-6">
 							<div class="form-group form-group-default">
 								<label>Medicos</label>
 								<select class="form-control" id="doctor"  name="coddoc">				
 								</select>
 							</div>
-						</div>
+						</div>-->
+
+						<div class="col-md-6">
+									<div class="form-group form-group-default">
+										<label>Especialidad</label>
+										<select class="form-control" id="continentes" required name="codespe">
+										</select>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group form-group-default">
+										<label>Médico</label>
+										<select class="form-control" id="doctor" required name="coddoc">
+										</select>
+									</div>
+								</div>
 						
 						<div class="col-md-12">
 							<div class="form-group">
