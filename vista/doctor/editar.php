@@ -46,16 +46,6 @@
 
 							<div class="col-md-6">
 								<div class="form-group form-group-default">
-									<label>Especialidad</label>
-									<select class="form-control" id="doctor" name="codespe" value="<?php echo $va['nombree']; ?>" placeholder="Ingrese espacialidad">
-
-									</select>
-								</div>
-							</div>
-
-
-							<div class="col-md-6">
-								<div class="form-group form-group-default">
 									<label>Sexo</label>
 									<select class="form-control" name="sexo" value="<?php echo $va['sexo']; ?>">
 										<option value="Masculino">Masculino</option>
