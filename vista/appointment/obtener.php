@@ -7,18 +7,17 @@
 		$db = $database->open();
 		try{
 			$codpaci  = $_GET['codpaci'];
-			$dnipa = $_POST['dnipa'];
+			$cedula = $_POST['cedula'];
 			$nombrep = $_POST['nombrep'];
-			$apellidop = $_POST['apellidop'];
-			$seguro = $_POST['seguro'];
-			$tele = $_POST['tele'];
+			$apellidop = $_POST['apellidop'];			
+			$telefono = $_POST['telefono'];
 			$sexo = $_POST['sexo'];
 			$usuario = $_POST['usuario'];
 			$password = $_POST['password'];
 			$estado = $_POST['estado'];
 			
 
-			$sql = "UPDATE paciente SET dnipa = '$dnipa',nombrep = '$nombrep',apellidop = '$apellidop',seguro = '$seguro',tele = '$tele',sexo = '$sexo' ,usuario = '$usuario',password = '$password',estado = '$estado' WHERE codpaci = '$codpaci'";
+			$sql = "UPDATE paciente SET cedula = '$cedula',nombrep = '$nombrep',apellidop = '$apellidop',telefono = '$telefono',sexo = '$sexo' ,usuario = '$usuario',password = '$password',estado = '$estado' WHERE codpaci = '$codpaci'";
 			//if-else statement in executing our query
 			$_SESSION['message'] = ( $db->exec($sql) ) ? 'Área actualizado correctamente' : 'No se puso actualizar el área';
 
