@@ -26,7 +26,7 @@ class customerscontroller{
 				$alm->apellidop=$_POST['txtapell'];
                 $alm->sexo=$_POST['cbosex'];
                 $alm->telefono=$_POST['txttelefono'];
-				$alm->fechanaci=$_POST['txtfechanaci'];
+				
 				$alm->correo=$_POST['txtcorreo'];
                 $alm->direccion=$_POST['txtdireccion'];
 				$alm->ciudad=$_POST['txtciudad'];
