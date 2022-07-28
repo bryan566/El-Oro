@@ -23,7 +23,7 @@
 								<div class="form-group form-group-default">
 									<label>Cedula</label>
 
-									<input type="text" class="form-control" maxlength="10" name="cedula" value="<?php echo $row['cedula']; ?>">
+									<input type="text" class="form-control" maxlength="10" name="cedula" value="<?php echo $row['cedula']; ?>" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
 								</div>
 							</div>
 
