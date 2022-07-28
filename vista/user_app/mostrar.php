@@ -384,9 +384,9 @@ $id=$_SESSION['id'];
 																</form>
 																<?php  }  ?>                         
 															</td>
-													<!--<?php
-														//	}
-														//} else {
+													<?php
+															}
+														} else {
 															?>
 															
 															<div class="message">
@@ -394,14 +394,14 @@ $id=$_SESSION['id'];
 																<p class="alert alert-warning">No cuenta con ninguna cita</p>
 															</div>
 														<?php
-													//	}
+														}
 														?>
 														
 												<?php
-										//	} else {
-											//	header('location:mostrar.php');
-										//	}
-											?>-->
+											} else {
+												header('location:mostrar.php');
+											}
+											?>
 					
 										</tbody>
 																							
