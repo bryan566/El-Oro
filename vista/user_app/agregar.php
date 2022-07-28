@@ -14,6 +14,30 @@
 			
                 <div class="card-body">
 				
+
+				<?php  
+				
+				$id=$_SESSION['id'];
+
+				
+					function connect(){
+					return new mysqli("localhost","root","","el oro");
+					}
+					$con = connect();
+
+					$sql = "SELECT * FROM paciente  WHERE codpaci= '$id'";
+
+					$query  =$con->query($sql);
+					$data =  array();
+					if($query){
+					while($r = $query->fetch_object()){
+						$data[] = $r;
+					}
+					}
+					?> 
+					<?php if(count($data)>0):?>
+						<?php foreach($data as $d):?>
+				
 		<form method="POST" autocomplete="off" enctype="multipart/form-data">
 					<div class="row">													
 							<!--<div class="col-md-6">
@@ -23,6 +47,16 @@
 								</select>
 							</div>
 						</div>-->
+
+						<div class="col-md-4">
+											<div class="form-group form-group-default">
+												<label>Sexo</label>
+												<select class="form-control" value="<?php echo $d->sexo; ?>" name="sexo" id="sexo">
+													<option value="<?php echo $d->sexo; ?>"><?php echo $d->sexo; ?></option>
+													<option>Femenino</option>
+												</select>
+											</div>
+										</div>
 
 						<div class="col-md-6">
 									<div class="form-group form-group-default">
@@ -35,10 +69,29 @@
 								<div class="col-md-6">
 									<div class="form-group form-group-default">
 										<label>Médico</label>
-										<select class="form-control" id="doctor" required name="coddoc">
+										<select class="form-control" value="<?php echo $d->sexo; ?>" name="sexo" id="sexo">
+										<option value="<?php echo $d->sexo; ?>"><?php echo $d->sexo; ?></option>
 										</select>
 									</div>
 								</div>
+
+																
+								<div class="form-group">
+								<label for="medico"> Médico</label>
+											<select name="medico" id="medico" class="custom-select">
+													
+											<?php           
+											foreach($listaMedicos as $registra){              
+												if ($especialidad->id_usu==$registra['id_usu']){
+												echo '<option value ="'. $registra['id_usu'] . '" selected= "true">'. $registra['med']. '</option>' ; 
+												}else {
+												echo '<option value ="'. $registra['id_usu'] . '">'. $registra['med']. '</option>' ;
+												}
+											}
+											?> 
+											</option>                                                    
+										</select>
+									</div>
 						
 						<div class="col-md-12">
 							<div class="form-group">
