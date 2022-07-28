@@ -189,7 +189,7 @@ $id=$_SESSION['id'];
 										
 											<div class="avatar-lg"><img src="../../assets/img/mujer.png" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
-												<h4><?php// echo ucfirst($_SESSION['nombre']); ?></h4>
+												<h4><?php // echo ucfirst($_SESSION['nombre']); ?></h4>
 												<p class="text-muted">Customers</p>
 											</div>
 										</div>
@@ -221,7 +221,7 @@ $id=$_SESSION['id'];
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									<?php// echo ucfirst($_SESSION['nombre']); ?>
+									<?php // echo ucfirst($_SESSION['nombre']); ?>
 									<span class="user-level">Customers</span>
 									<span class="caret"></span>
 								</span>
@@ -330,7 +330,7 @@ if($query){
 										<div class="col-md-4">
 											<div class="form-group form-group-default">
 												<label>Cédula</label>
-												<input type="text" class="form-control" value="<?php echo $d->cedula; ?>" name="dnipa" placeholder="DNI" placeholder="77764664">
+												<input type="text" class="form-control" value="<?php echo $d->cedula; ?>" name="cedula" placeholder="Cédula" placeholder="77764664">
 											</div>
 										</div>
 										<div class="col-md-6">
@@ -350,8 +350,8 @@ if($query){
 										<!--<div class="col-md-4">
 											<div class="form-group form-group-default">
 												<label>Seguro</label>
-												<select class="form-control" value="<?php// echo $d->seguro; ?>" name="seguro" id="seguro">
-													<option value="<?php// echo $d->seguro; ?>"><?php// echo $d->seguro; ?></option>
+												<select class="form-control" value="<?php // echo $d->seguro; ?>" name="seguro" id="seguro">
+													<option value="<?php // echo $d->seguro; ?>"><?php // echo $d->seguro; ?></option>
 													<option value="Si">Si</option>
 													<option value="No">No</option>
 												</select>
@@ -362,14 +362,14 @@ if($query){
 												<label>Sexo</label>
 												<select class="form-control" value="<?php echo $d->sexo; ?>" name="sexo" id="sexo">
 													<option value="<?php echo $d->sexo; ?>"><?php echo $d->sexo; ?></option>
-													<option>Female</option>
+													<option>Femenino</option>
 												</select>
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group form-group-default">
 												<label>Teléfono</label>
-												<input type="text" class="form-control" value="<?php echo $d->tele; ?>" name="tele" placeholder="Phone">
+												<input type="text" class="form-control" value="<?php echo $d->telefono; ?>" name="tele" placeholder="Phone">
 											</div>
 										</div>
 										<div class="col-md-6">
@@ -402,7 +402,7 @@ if($query){
 								</div>
 								<div class="card-body">
 									<div class="user-profile text-center">
-										<div class="name"><?php// echo $d->nombrep; ?></div>
+										<div class="name"><?php // echo $d->nombrep; ?></div>
 										<div class="job">Cliente</div>
 										
 										<div class="social-media">
