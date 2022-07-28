@@ -21,12 +21,15 @@ class customerscontroller{
     //aca ando haciendo
     public function recibir(){
                 $alm = new Modelo();
-                //$alm->dnipa=$_POST['txtdnia'];
+                $alm->cedula=$_POST['txtcedula'];
 				$alm->nombrep=$_POST['txtnomb'];
 				$alm->apellidop=$_POST['txtapell'];
-				$alm->seguro=$_POST['cbosegu'];
-				$alm->tele=$_POST['txttele'];
-				$alm->sexo=$_POST['cbosex'];
+                $alm->sexo=$_POST['cbosex'];
+                $alm->telefono=$_POST['txttelefono'];
+				$alm->fechanaci=$_POST['txtfechanaci'];
+				$alm->correo=$_POST['txtcorreo'];
+                $alm->direccion=$_POST['txtdireccion'];
+				$alm->ciudad=$_POST['txtciudad'];
 				$alm->usuario=$_POST['txtusu'];
 				$alm->password=$_POST['txtpass'];
 				$alm->estado=$_POST['cboesta'];
