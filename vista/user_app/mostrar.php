@@ -344,64 +344,64 @@ $id=$_SESSION['id'];
 										<tbody>
 											<?php
 
-if (isset($_SESSION['id'])) {
-	
-	include "../config/conex.php";
+										if (isset($_SESSION['id'])) {
+											
+											include "../config/conex.php";
 
-	$sql = "SELECT cita.codcit, cita.dates, cita.hour, paciente.codpaci, 
-						paciente.cedula, paciente.nombrep, paciente.apellidop, doctor.coddoc, doctor.cedula, doctor.nombre, 
-						doctor.apellido, especialidad.codespe, especialidad.nombrees, cita.estado FROM cita INNER JOIN paciente ON 
-						cita.codpaci=paciente.codpaci INNER JOIN doctor ON cita.coddoc=doctor.coddoc INNER JOIN especialidad ON 
-						cita.codespe=especialidad.codespe WHERE paciente.codpaci='$id'";
+											$sql = "SELECT cita.codcit, cita.dates, cita.hour, paciente.codpaci, 
+																paciente.cedula, paciente.nombrep, paciente.apellidop, doctor.coddoc, doctor.cedula, doctor.nombre, 
+																doctor.apellido, especialidad.codespe, especialidad.nombrees, cita.estado FROM cita INNER JOIN paciente ON 
+																cita.codpaci=paciente.codpaci INNER JOIN doctor ON cita.coddoc=doctor.coddoc INNER JOIN especialidad ON 
+																cita.codespe=especialidad.codespe WHERE paciente.codpaci='$id'";
 
-	$query = mysqli_query($conex, $sql);
-?>
+											$query = mysqli_query($conex, $sql);
+										?>
 
- <?php
-			if (mysqli_num_rows($query) > 0) {
-				while ($row = mysqli_fetch_assoc($query)) {
-			?>
-			<td><?php echo $row['codcit']; ?></td>
-			<td><?php echo $row['cedula']; ?></td>
-			<td><?php echo $row['nombrep']; ?> &nbsp;<?php echo $row['apellidop']; ?></td>
+										<?php
+													if (mysqli_num_rows($query) > 0) {
+														while ($row = mysqli_fetch_assoc($query)) {
+													?>
+													<td><?php echo $row['codcit']; ?></td>
+													<td><?php echo $row['cedula']; ?></td>
+													<td><?php echo $row['nombrep']; ?> &nbsp;<?php echo $row['apellidop']; ?></td>
 
-			<td><?php echo $row['dates']; ?></td>
-			<td><?php echo $row['hour']; ?></td>
-			
-			<td><?php echo $row['nombre']; ?>&nbsp;<?php echo $row['apellido']; ?></td>
-			<td><?php echo $row['nombrees']; ?></td>
-			<td>
-						 <?php    if($row['estado']==1)  { ?> 
-						  <form  method="get" action="javascript:activo('<?php echo $row['codcit']; ?>')">
-							<span class="badge badge-success">Atendido</span>
+													<td><?php echo $row['dates']; ?></td>
+													<td><?php echo $row['hour']; ?></td>
+													
+													<td><?php echo $row['nombre']; ?>&nbsp;<?php echo $row['apellido']; ?></td>
+													<td><?php echo $row['nombrees']; ?></td>
+													<td>
+																<?php    if($row['estado']==1)  { ?> 
+																<form  method="get" action="javascript:activo('<?php echo $row['codcit']; ?>')">
+																	<span class="badge badge-success">Atendido</span>
 
-						  </form>
-						<?php  }   else {?> 
+																</form>
+																<?php  }   else {?> 
 
-						  <form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
-							
-							<span class="badge badge-danger">Pendiente</span>
-						  </form>
-						<?php  } ?>                         
-					</td>
-			<?php
-				}
-			} else {
-				?>
-				
-				<div class="message">
-					
-					<p class="alert alert-warning">No cuenta con ninguna cita</p>
-				</div>
-			<?php
-			}
-			?>
-			
-	<?php
-} else {
-	header('location:mostrar.php');
-}
-?>
+																<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
+																	
+																	<span class="badge badge-danger">Pendiente</span>
+																</form><br>
+																<?php  } ?>                         
+															</td>
+													<?php
+															}
+														} else {
+															?>
+															
+															<div class="message">
+																
+																<p class="alert alert-warning">No cuenta con ninguna cita</p>
+															</div>
+														<?php
+														}
+														?>
+														
+												<?php
+											} else {
+												header('location:mostrar.php');
+											}
+											?>
 					
 										</tbody>
 																							
