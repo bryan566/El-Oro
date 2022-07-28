@@ -2,7 +2,7 @@
 
 $conexion = mysqli_connect("localhost","root","","el oro");
 
-$query = $conexion->query("SELECT * FROM especialidades");
+$query = $conexion->query("SELECT * FROM especialidad");
 
 echo '<option value="0">Seleccione</option>';
 
