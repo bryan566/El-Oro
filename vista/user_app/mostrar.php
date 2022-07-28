@@ -324,7 +324,7 @@ $id=$_SESSION['id'];
 													<th>Hora</th>
 													<th>Médico</th>
 													<th>Especialidad</th>
-													<th style="width: 10%">Estado</th>
+													<th style="width: 10%">Estado</th><br>
 												</tr>
 											</thead>
 											<tfoot>
@@ -381,7 +381,7 @@ $id=$_SESSION['id'];
 																<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
 																	
 																	<span class="badge badge-danger">Pendiente</span>
-																</form><br>
+																</form>
 																<?php  } ?>                         
 															</td>
 													<?php
