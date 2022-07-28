@@ -382,10 +382,10 @@ $id=$_SESSION['id'];
 																	
 																	<span class="badge badge-danger">Pendiente</span>
 																</form>
-																<?php  } echo ("<br>"); ?>                         
+																<?php  }  ?>                         
 															</td>
 													<?php
-															}
+														echo ("<br>");	}
 														} else {
 															?>
 															
