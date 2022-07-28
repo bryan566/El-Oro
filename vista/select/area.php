@@ -4,7 +4,7 @@ $conexion = mysqli_connect("localhost","root","","el oro");
 
 $el_continente = $_POST['continente'];
 
-$query = $conexion->query("SELECT * FROM doctorrr WHERE codespe = $el_continente");
+$query = $conexion->query("SELECT * FROM doctor WHERE codespe = $el_continente");
 
 echo '<option value="0">Seleccione</option>';
 
