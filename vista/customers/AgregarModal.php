@@ -13,12 +13,12 @@
                 <div class="card-body">
 	<form method="POST" autocomplete="off" enctype="multipart/form-data" >
 					<div class="row">
-						<!--<div class="col-sm-12">
+						<div class="col-sm-12">
 							<div class="form-group form-group-default">
-								<label>DNI</label>
-								<input name="dnipa" type="text" required class="form-control" maxlength="8" placeholder="Ingrese dni" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+								<label>Cédula</label>
+								<input name="cedula" type="text" required class="form-control" maxlength="10" placeholder="Ingrese cédula" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
 							</div>
-						</div>-->
+						</div>
 						<div class="col-md-6 pr-0">
 							<div class="form-group form-group-default">
 								<label>Nombre</label>
@@ -32,23 +32,46 @@
 							</div>
 						</div>
 						
-						
-						
 						<div class="col-md-6">
 							<div class="form-group form-group-default">
-								<label>Teléfono</label>
-								<input name="tele" type="text" class="form-control" required maxlength="10" placeholder="Ingrese teléfono" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+								<label>Sexo</label>
+									<select class="form-control" name="sexo">
+										<option value="Masculino">Masculino</option>
+										<option value="Femenino">Femenino</option>				
+									</select>
 							</div>
 						</div>
 						
 						<div class="col-md-6">
 							<div class="form-group form-group-default">
-								<label>Sexo</label>
-					<select class="form-control" name="sexo">
-						<option value="Masculino">Masculino</option>
-						<option value="Femenino">Femenino</option>
-				
-					</select>
+								<label>Teléfono</label>
+								<input name="telefono" type="text" class="form-control" required maxlength="10" placeholder="Ingrese teléfono" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group form-group-default">
+								<label>Fecha Nacimiento</label>
+								<input name="fechanaci" type="date" class="form-control" placeholder="Ingresa tu fecha">
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group form-group-default">
+								<label>Correo</label>
+								<input name="correo" required="" type="text" class="form-control" placeholder="Ingresa tu correo">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group form-group-default">
+								<label>Direccion</label>
+								<input name="direccion" required="" type="text" class="form-control" placeholder="Ingrese su direccion">
+							</div>
+						</div>
+
+						<div class="col-md-6 pr-0">
+							<div class="form-group form-group-default">
+								<label>Ciudad</label>
+								<input name="ciudad" required="" type="text" class="form-control" placeholder="Ingrese su ciudad">
 							</div>
 						</div>
 						
@@ -64,10 +87,7 @@
 								<label>Password</label>
 								<input name="clave" type="password" class="form-control" required placeholder="Ingrese contraseña">
 							</div>
-						</div>
-						
-						
-						
+						</div>											
 						
 					</div>
 			
