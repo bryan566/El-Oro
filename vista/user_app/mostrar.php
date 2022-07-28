@@ -361,7 +361,7 @@ $id=$_SESSION['id'];
 													if (mysqli_num_rows($query) > 0) {
 														while ($row = mysqli_fetch_assoc($query)) {
 													?>
-													<td><?php echo $row['codcit']; ?></td>
+													<!--<td><?php // echo $row['codcit']; ?></td>-->
 													<td><?php echo $row['cedula']; ?></td>
 													<td><?php echo $row['nombrep']; ?> &nbsp;<?php echo $row['apellidop']; ?></td>
 
