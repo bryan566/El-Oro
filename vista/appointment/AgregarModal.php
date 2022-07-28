@@ -41,7 +41,7 @@
 								<div class="col-md-6">
 									<div class="form-group form-group-default">
 										<label>Especialidad</label>
-										<select class="form-control" id="especialidad" required name="codespe">
+										<select class="form-control" id="continentes" required name="codespe">
 										</select>
 									</div>
 								</div>
@@ -49,7 +49,7 @@
 								<div class="col-md-6">
 									<div class="form-group form-group-default">
 										<label>Médico</label>
-										<select class="form-control" id="doctor" required name="coddoc">
+										<select class="form-control" id="paises" required name="coddoc">
 										</select>
 									</div>
 								</div>
