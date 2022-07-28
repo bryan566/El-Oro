@@ -20,7 +20,7 @@ class Modelo{
     public function  insertar(Modelo $data){
     try {
       //$query="INSERT INTO customers (dnipa,nombrep,apellidop,seguro,tele,sexo,usuario,password,estado)VALUES(?,?,?,?,?,?,?,?,?)";
-      $query="INSERT INTO paciente (nombrep,apellidop,seguro,tele,sexo,usuario,password,estado)VALUES(?,?,?,?,?,?,?,?)";
+      $query="INSERT INTO paciente (nombrep,apellidop,seguro,telefono,sexo,usuario,password,estado)VALUES(?,?,?,?,?,?,?,?)";
 
       $this->db->prepare($query)->execute(array($data->nombrees));
 

@@ -11,12 +11,12 @@
 			$nombrep = $_POST['nombrep'];
 			$apellidop = $_POST['apellidop'];
 			$seguro = $_POST['seguro'];
-			$tele = $_POST['tele'];
+			$telefono = $_POST['telefono'];
 			$sexo = $_POST['sexo'];
 			$usuario = $_POST['usuario'];
 			
 			//$sql = "UPDATE customers SET dnipa = '$dnipa',nombrep = '$nombrep',apellidop = '$apellidop',seguro = '$seguro',tele = '$tele',sexo = '$sexo' ,usuario = '$usuario' WHERE codpaci = '$codpaci'";
-			$sql = "UPDATE paciente SET nombrep = '$nombrep',apellidop = '$apellidop',seguro = '$seguro',tele = '$tele',sexo = '$sexo' ,usuario = '$usuario' WHERE codpaci = '$codpaci'";
+			$sql = "UPDATE paciente SET nombrep = '$nombrep',apellidop = '$apellidop',seguro = '$seguro',telefono = '$telefono',sexo = '$sexo' ,usuario = '$usuario' WHERE codpaci = '$codpaci'";
 			//if-else statement in executing our query
 			$_SESSION['message'] = ( $db->exec($sql) ) ? 'Paciente actualizado correctamente' : 'No se puso actualizar el paciente';
 
