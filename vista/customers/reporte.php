@@ -54,7 +54,7 @@ $this->Cell(0,10,'Pagina '.$this->PageNo().'/{nb}',0,0,'C');
 
 $db = new dbConexion();
 $connString = $db->getConexion();
-$display_heading = array('codpaci'=>'#', 'dnipa'=> 'DNI', 'nombrep'=> 'Nombres','apellidop'=> 'Apellidos','seguro'=> 'Seguro','tele'=> 'Telefono', 'sexo'=> 'Sexo');
+$display_heading = array('codpaci'=>'#', 'dnipa'=> 'DNI', 'nombrep'=> 'Nombres','apellidop'=> 'Apellidos','seguro'=> 'Seguro','telefono'=> 'Telefono', 'sexo'=> 'Sexo');
 
 $result = mysqli_query($connString, "SELECT * FROM paciente") or die("database error:". mysqli_error($connString));
 $header = mysqli_query($connString, "SHOW columns FROM paciente");

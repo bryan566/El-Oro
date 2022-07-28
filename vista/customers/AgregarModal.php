@@ -37,7 +37,7 @@
 						<div class="col-md-6">
 							<div class="form-group form-group-default">
 								<label>Teléfono</label>
-								<input name="tele" type="text" class="form-control" required maxlength="10" placeholder="Ingrese teléfono" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+								<input name="telefono" type="text" class="form-control" required maxlength="10" placeholder="Ingrese teléfono" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
 							</div>
 						</div>
 						
