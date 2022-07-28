@@ -61,7 +61,7 @@
 								<div class="form-group form-group-default">
 									<label>Teléfono</label>
 
-									<input type="text" maxlength="10" class="form-control" name="tele" value="<?php echo $row['tele']; ?>">
+									<input type="text" maxlength="10" class="form-control" name="telefono" value="<?php echo $row['telefono']; ?>">
 								</div>
 							</div>
 
