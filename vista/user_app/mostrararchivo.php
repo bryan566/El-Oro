@@ -349,11 +349,10 @@ $id=$_SESSION['id'];
 									//	foreach ($value as $va) { ?>
 									<tr>
 										<!--<td><?php // echo $va['codcit'];?></td>-->
-										<td><?php echo $va['dates'];?></td>
-										<td><?php echo $va['hour'];?></td>
+										<td><?php echo $va['nombre'];?></td>										
 										<td><?php echo $va ['nombrep'];?></td>
-										<td><?php echo $va ['nombre'];?></td>
-										<td><?php echo $va ['nombrees'];?></td>
+										<td><?php echo $va ['decripcion'];?></td>
+										<td><?php echo $va ['urlpdf'];?></td>
 										
 							   
 										<td>
