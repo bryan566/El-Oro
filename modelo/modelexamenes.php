@@ -3,8 +3,19 @@
 class Modelo{
 
   private $examen;
-  private $db;
+ // private $db;
 
+  private $cita;
+  private $db;
+  public $codcit;
+  public $dates;
+  public $hour;
+  public $codpaci;
+  public $coddoc;
+  public $codespe;
+  public $estado;
+  
+  
   
   
 
@@ -13,7 +24,9 @@ class Modelo{
       $this->db=new PDO('mysql:host=localhost;dbname=el oro',"root","");
   }
   public function mostrar($tabla,$condicion){
-      $consulta="SELECT cita.codcit, paciente.codpaci, paciente.nombrep, paciente.apellidop, doctor.coddoc, doctor.nombre, doctor.apellido, especialidad.codespe, especialidad.nombrees, cita.estado FROM cita INNER JOIN paciente ON cita.codpaci=paciente.codpaci INNER JOIN doctor ON cita.coddoc=doctor.coddoc INNER JOIN especialidad ON cita.codespe=especialidad.codespe WHERE paciente.codpaci='$id'";
+    $consulta="SELECT cita.codcit, cita.dates, cita.hour,paciente.nombrep,doctor.nombre, especialidad.nombrees, cita.estado, cita.fecha_create FROM cita INNER JOIN paciente ON cita.codpaci = paciente.codpaci INNER JOIN doctor ON cita.coddoc = doctor.coddoc INNER JOIN especialidad ON cita.codespe = especialidad.codespe";
+
+    //  $consulta="SELECT cita.codcit, paciente.codpaci, paciente.nombrep, paciente.apellidop, doctor.coddoc, doctor.nombre, doctor.apellido, especialidad.codespe, especialidad.nombrees, cita.estado FROM cita INNER JOIN paciente ON cita.codpaci=paciente.codpaci INNER JOIN doctor ON cita.coddoc=doctor.coddoc INNER JOIN especialidad ON cita.codespe=especialidad.codespe WHERE paciente.codpaci='$id'";
       //$consulta="SELECT horario.codhor, horario.nomhor, doctor.coddoc, doctor.cedula, doctor.nombre, doctor.apellido, doctor.correo, doctor.direccion, doctor.ciudad, horario.fere FROM horario INNER JOIN doctor ON  horario.coddoc = doctor.coddoc";
       
       $resultado=$this->db->query($consulta);
