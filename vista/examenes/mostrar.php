@@ -246,11 +246,10 @@
 											</a>
 											
 										</div>-->
-										<div class="card-body">
+					<div class="card-body">		
 								
-								
-										<div class="table-responsive">
-										<table id="add-row" class="display table table-striped table-hover" >
+						<div class="table-responsive">
+							<table id="add-row" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
 													<!--<th>#</th>-->
@@ -278,65 +277,50 @@
 											</tfoot>-->
 											
 											
-										  <tbody>
-                          <?php
-                          foreach ($dato as $key => $value){
-                              foreach ($value as $va) { ?>
-                           <tr>
-                               <!--<td><?php // echo $va['codcit'];?></td>-->
-                              <td><?php echo $va['dates'];?></td>
-                              <td><?php echo $va['hour'];?></td>
-                              <td><?php echo $va ['nombrep'];?></td>
-							  <td><?php echo $va ['nombre'];?></td>
-							  <td><?php echo $va ['nombrees'];?></td>
-							  
+								<tbody>
+									<?php
+									foreach ($dato as $key => $value){
+										foreach ($value as $va) { ?>
+									<tr>
+										<!--<td><?php // echo $va['codcit'];?></td>-->
+										<td><?php echo $va['dates'];?></td>
+										<td><?php echo $va['hour'];?></td>
+										<td><?php echo $va ['nombrep'];?></td>
+										<td><?php echo $va ['nombre'];?></td>
+										<td><?php echo $va ['nombrees'];?></td>
+										
 							   
-							   <td>
-						 <?php    if($va['estado']==1)  { ?> 
-						  <form  method="get" action="javascript:activo('<?php echo $va['codcit']; ?>')">
-							
-							<span class="text-success pl-3">Atendido</span>
-						  </form>
-						<?php  }   else {?> 
+										<td>
+									<?php    if($va['estado']==1)  { ?> 
+									<form  method="get" action="javascript:activo('<?php echo $va['codcit']; ?>')">
+										
+										<span class="text-success pl-3">Atendido</span>
+									</form>
+									<?php  }   else {?> 
 
-						  <form  method="get" action="javascript:inactivo('<?php echo $va['codcit']; ?>')"> 
-							<button type="submit" class="btn btn-danger btn-xs">Pendiente</button>
-						  </form>
-						<?php  } ?>                         
-					</td>
-							   
-							 
-
-
-                              <td>
-						<div class="form-button-action">
-							
-													
-							<button href="#deleteRowModal=<?php echo $va['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $va['codcit']; ?>">
-						<i class="fa fa-trash"></i>
-						
-							</button>
-													
-								</div>
-													</td>
-
-												<?php include('editar.php'); ?>
-								
-												  </tr>
-												  <?php
-												  }
-												  }
-												  ?>
-											</tbody>
-												
-												
-											
-										</table>
-						</div>
-									
-									
-								</div>
-								</div>
+									<form  method="get" action="javascript:inactivo('<?php echo $va['codcit']; ?>')"> 
+										<button type="submit" class="btn btn-danger btn-xs">Pendiente</button>
+									</form>
+									<?php  } ?>                         
+									</td>
+                              		<td>
+										<div class="form-button-action">													
+											<button href="#deleteRowModal=<?php echo $va['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $va['codcit']; ?>">
+												<i class="fa fa-trash"></i>						
+											</button>													
+										</div>
+									</td>
+									<?php include('editar.php'); ?>								
+									</tr>
+									<?php
+									}
+									}
+									?>
+								</tbody>													
+							</table>
+						</div>							
+					</div>
+				</div>
 								
 								
 							</div>
