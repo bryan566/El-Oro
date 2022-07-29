@@ -379,8 +379,8 @@ $id=$_SESSION['id'];
 									<?php include('editar.php'); ?>								
 									</tr>
 									<?php
-									}
-									}
+									//}
+									//}
 									?>
 								</tbody>													
 							</table>
@@ -393,234 +393,33 @@ $id=$_SESSION['id'];
 			</div>		
 		</div>
 	<!--   Core JS Files   -->
-	<!-- 
+ 
 	<script src="../../assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="../../assets/js/core/popper.min.js"></script>
-	<script src="../../assets/js/core/bootstrap.min.js"></script>-->
+	<script src="../../assets/js/core/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
-	<!--
+	
 	<script src="../../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="../../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-	-->
+	
 	<!-- jQuery Scrollbar -->
-	<!--
+	
 	<script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-	-->
+	
 	<!-- Datatables -->
-	<!--
+	
 	<script src="../../assets/js/plugin/datatables/datatables.min.js"></script>
-	-->
+	
 	<!-- Atlantis JS -->
-    <!--
+    
 	<script src="../../assets/js/atlantis.min.js"></script>
-	-->
+	
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<!--
+	
 	<script src="../../assets/js/setting-demo2.js"></script>
-    -->
+    
 
 	<!--   Core JS Files   -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="../assets/js/functions4.js"></script>
-  <script src="../assets/js/functions5.js"></script>
-	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="../assets/js/core/popper.min.js"></script>
-	<script src="../assets/js/core/bootstrap.min.js"></script>
-	<!-- jQuery UI -->
-	<script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 	
-	<!-- jQuery Scrollbar -->
-	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-	<!-- Datatables -->
-	<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
-	<!-- Atlantis JS -->
-	<script src="../assets/js/atlantis.min.js"></script>
-	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="../assets/js/setting-demo2.js"></script>
-	<script >
-		$(document).ready(function() {
-			$('#basic-datatables').DataTable({
-			});
-
-			$('#multi-filter-select').DataTable( {
-				"pageLength": 5,
-				initComplete: function () {
-					this.api().columns().every( function () {
-						var column = this;
-						var select = $('<select class="form-control"><option value=""></option></select>')
-						.appendTo( $(column.footer()).empty() )
-						.on( 'change', function () {
-							var val = $.fn.dataTable.util.escapeRegex(
-								$(this).val()
-								);
-
-							column
-							.search( val ? '^'+val+'$' : '', true, false )
-							.draw();
-						} );
-
-						column.data().unique().sort().each( function ( d, j ) {
-							select.append( '<option value="'+d+'">'+d+'</option>' )
-						} );
-					} );
-				}
-			});
-
-			// Add Row
-			$('#add-row').DataTable({
-				"pageLength": 5,
-			});
-
-			var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
-
-			$('#addRowButton').click(function() {
-				$('#add-row').dataTable().fnAddData([
-					$("#addName").val(),
-					$("#addPosition").val(),
-					$("#addOffice").val(),
-					action
-					]);
-				$('#addRowModal').modal('hide');
-
-			});
-		});
-	</script>
-	
-	  	<script>
-	function activo(codcit)
-{
-	var id=codcit;
-	$.ajax({
-        type:"GET",
-		url:"../assets/ajax/editar_estado_activo_cita.php?id="+id,
-    }).done(function(data){
-        window.location.href ='../folder/appointment.php';
-    })
-
-}
-
-// Editar estado inactivo
-function inactivo(codcit)
-{
-	var id=codcit;
-	$.ajax({
-		type:"GET",
-		url:"../assets/ajax/editar_estado_inactivo_cita.php?id="+id,
-    }).done(function(data){
-        window.location.href ='../folder/appointment.php';
-    })
-}
-
-	
-	</script>
-
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-<!--------------------------------script nuevo--------------------------------------------------->
-
-<?php
-if(isset($_POST["agregar"])){
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "el oro";
-
-// Creamos la conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Revisamos la conexión
-if ($conn->connect_error) {
-       die("Connection failed: " . $conn->connect_error);
-   } 
-$dates=$_POST['dates'];
-$hour=$_POST['hour'];
-$codpaci=$_POST['codpaci'];
-$coddoc=$_POST['coddoc'];
-$codespe=$_POST['codespe'];
-
-// Realizamos la consulta para saber si coincide con uno de esos criterios
-$sql = "select * from cita where codcit='$codcit'";
-$result = mysqli_query($conn, $sql);
-?>
-
-
-<?php
- // Validamos si hay resultados
- if(mysqli_num_rows($result)>0)
- {
-        // Si es mayor a cero imprimimos que ya existe el usuario
-      
-        if($result){
-   ?>
-
-        <script type="text/javascript">
-
-Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Ya existe el registro a agregar!'
- 
-})
-
-
-        </script>
-
-    <?php
-    }
-  
- }
- else
- {
-// Si no hay resultados, ingresamos el registro a la base de datos
-$sql2 = "INSERT INTO cita (dates,hour,codpaci,coddoc,codespe,estado)VALUES ('$dates','$hour','$codpaci','$coddoc','$codespe','0')";
-
-
-if (mysqli_query($conn, $sql2)) {
-      
-       if($sql2){
-   ?>
-
-        <script type="text/javascript">
-             
-Swal.fire({
-  position: 'top-end',
-  icon: 'success',
-  title: 'Agregado correctamente',
-  showConfirmButton: false,
-  timer: 1500
-}).then(function() {
-            window.location = "../folder/appointment.php";
-        });
-        </script>
-
-    <?php
-    }
-    else{
-       ?>
-       <script type="text/javascript">
-        Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'No se pudo guardar!'
- 
-})
-       </script>
-       <?php
-
-    }
-    
-} else {
-      
-       echo "Error: " . $sql2 . "" . mysqli_error($conn);
-}
-
-}
-// Cerramos la conexión
-$conn->close();
-
-}
-?>	 
 </body>
 </html>
