@@ -1,10 +1,6 @@
 
 
 
-
-
-
-
 <?php
   // Se prendio esta mrd :v
   session_start();
@@ -295,7 +291,7 @@ $id=$_SESSION['id'];
 			<div class="content">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Citas</h4>
+						<h4 class="page-title">Exámenes</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
 								<a href="../vista/admin/admin.php">
@@ -317,7 +313,9 @@ $id=$_SESSION['id'];
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">Mis citas</h4>
+									<h4 class="card-title">Mis Exámenes</h4>
+									<a href="#addRowModal" class="btn btn-primary btn-round ml-auto" data-toggle="modal">Nuevo</a>
+									<?php include('agregar.php'); ?>
 								</div>
 								<div class="card-body">
 								<div class="table-responsive">
