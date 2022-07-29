@@ -1,6 +1,6 @@
 
 <?php
-require_once '../controlador/examencontroller.php';
+require_once '../controlador/examenescontroller.php';
 $objapp=new examenescontroller();
 $op="mostrar";
 if(isset($_REQUEST['op']))
