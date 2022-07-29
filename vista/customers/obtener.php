@@ -17,6 +17,7 @@
 			$direccion = $_POST['direccion'];
 			$ciudad = $_POST['ciudad'];
 			$usuario = $_POST['usuario'];
+			$archivo = $_POST['archivo'];
 			
 			//$sql = "UPDATE customers SET dnipa = '$dnipa',nombrep = '$nombrep',apellidop = '$apellidop',seguro = '$seguro',tele = '$tele',sexo = '$sexo' ,usuario = '$usuario' WHERE codpaci = '$codpaci'";
 			$sql = "UPDATE paciente SET cedula = '$cedula', nombrep = '$nombrep',apellidop = '$apellidop',sexo = '$sexo',telefono = '$telefono',correo = '$correo',direccion = '$direccion',ciudad = '$ciudad',usuario = '$usuario' WHERE codpaci = '$codpaci'";

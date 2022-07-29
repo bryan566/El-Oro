@@ -33,6 +33,7 @@ class customerscontroller{
 				$alm->usuario=$_POST['txtusu'];
 				$alm->password=$_POST['txtpass'];
 				$alm->estado=$_POST['cboesta'];
+                $alm->archivo=$_POST['txtarchivo'];
 				
                 
 

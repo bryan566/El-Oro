@@ -470,6 +470,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 		$ciudad = $_POST['ciudad'];		
 		$usuario = $_POST['usuario'];
 		$clave = MD5($_POST['clave']);
+		$archivo = ($_POST['archivo']);
 
 
 		// Realizamos la consulta para saber si coincide con uno de esos criterios
@@ -501,7 +502,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 		} else {
 			// Si no hay resultados, ingresamos el registro a la base de datos
 			//$sql2 = "INSERT INTO customers(dnipa,nombrep,apellidop,seguro,tele,sexo,usuario,clave,cargo,estado)VALUES ('$dnipa','$nombrep','$apellidop','$seguro','$tele','$sexo','$usuario','$clave','2','1')";
-			$sql2 = "INSERT INTO paciente(cedula,nombrep,apellidop,sexo,telefono,fechanaci,correo,direccion,ciudad,usuario,clave,cargo,estado)VALUES ('$cedula','$nombrep','$apellidop','$sexo','$telefono', '$fechanaci', '$correo', '$direccion', '$ciudad', '$usuario','$clave','2','1')";
+			$sql2 = "INSERT INTO paciente(cedula,nombrep,apellidop,sexo,telefono,fechanaci,correo,direccion,ciudad,usuario,clave,archivo,cargo,estado)VALUES ('$cedula','$nombrep','$apellidop','$sexo','$telefono', '$fechanaci', '$correo', '$direccion', '$ciudad', '$usuario','$clave','$archivo','2','1')";
 
 
 			if (mysqli_query($conn, $sql2)) {
