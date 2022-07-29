@@ -218,7 +218,7 @@ $id=$_SESSION['id'];
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									<?php// echo ucfirst($_SESSION['nombre']); ?>
+									<?php // echo ucfirst($_SESSION['nombre']); ?>
 									<span class="user-level">Customers</span>
 									<span class="caret"></span>
 								</span>
@@ -360,29 +360,29 @@ $id=$_SESSION['id'];
 									if (mysqli_num_rows($query) > 0) {
 										while ($row = mysqli_fetch_assoc($query)) {
 									?>
-									<!--<td><?php// echo $row['codcit']; ?></td> -->
+									<!--<td><?php // echo $row['codcit']; ?></td> -->
 									<td><?php echo $row['nombre']; ?> &nbsp;<?php echo $row['apellido']; ?></td>
 									<td><?php echo $row['nombrees']; ?></td>
 									
 						
-									<td><?php// echo $row['dates']; ?></td>
+									<td><?php // echo $row['dates']; ?></td>
 									<!--<td><?php //echo $row['hour']; ?></td>
 									
-									<td><?php// echo $row['nombrees']; ?>&nbsp;<?php// echo $row['apedoc']; ?></td>
-									<td><?php// echo $row['nombrees']; ?></td> -->
+									<td><?php // echo $row['nombrees']; ?>&nbsp;<?php // echo $row['apedoc']; ?></td>
+									<td><?php // echo $row['nombrees']; ?></td> -->
 									<!--  <td>
 												 <?php  //  if($row['estado']==1)  { ?> 
-												  <form  method="get" action="javascript:activo('<?php// echo $row['codcit']; ?>')">
+												  <form  method="get" action="javascript:activo('<?php // echo $row['codcit']; ?>')">
 													<span class="badge badge-success">Atendido</span>
 						
 												  </form>
 												<?php // }   else {?> 
 						
-												  <form  method="get" action="javascript:inactivo('<?php// echo $row['codcit']; ?>')"> 
+												  <form  method="get" action="javascript:inactivo('<?php // echo $row['codcit']; ?>')"> 
 													
 													<span class="badge badge-danger">Pendiente</span>
 												  </form>
-												<?php//  } ?>                         
+												<?php //  } ?>                         
 											</td> -->
 						          <?php
 										}

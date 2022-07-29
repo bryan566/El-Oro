@@ -32,10 +32,10 @@
 								<label>Cargo</label>
 								<select class="form-control" name="cargo">
 				<option value="1">Administrador</option>
-				<option value="1">Paciente</option>
-				<option value="1">Secretaria</option>
-				<option value="1">Auxiliar</option>
-				<option value="1">Medico</option>
+				<option value="2">Paciente</option>
+				<option value="3">Secretaria</option>
+				<option value="4">Auxiliar</option>
+				<option value="5">Medico</option>
 				
 				
 				
