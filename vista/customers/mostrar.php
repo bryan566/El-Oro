@@ -292,7 +292,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 																</td>
 
 
-																<td><?php echo $row['direccion']; ?></td>
+																<!--<td><?php echo $row['direccion']; ?></td>-->
 
 																<td>
 																	<div class="form-button-action">
