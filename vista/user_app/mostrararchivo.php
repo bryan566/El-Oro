@@ -379,7 +379,7 @@ $id=$_SESSION['id'];
 									<?php include('editar.php'); ?>								
 									</tr>
 									<?php
-									}
+									//}
 									}
 									?>
 								</tbody>													
