@@ -139,7 +139,7 @@
 							<div class="collapse" id="user">
 								<ul class="nav nav-collapse">
 									<li>
-										    <a href="../../folder/usuarios.php">
+										    <a href="../../folder/examen.php">
 											<span class="sub-item text-white">Mostrar</span>
 										</a>
 									</li>
