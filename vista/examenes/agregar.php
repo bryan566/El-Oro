@@ -1,7 +1,4 @@
-<!-- Agregar Nuevos Registros -->
-<?php include_once('../config/dbconect.php');
-
-?>
+<!-- Agregar Nuevos examenes -->
 
 <link rel="stylesheet" href="/assets/css/adjuntar.css">
 
