@@ -376,7 +376,7 @@ $id=$_SESSION['id'];
 											</button>													
 										</div>
 									</td>
-									<?php include('editar.php'); ?>								
+									<?php // include('editar.php'); ?>								
 									</tr>
 									<?php
 									//}
