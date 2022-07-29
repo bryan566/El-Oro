@@ -1,7 +1,7 @@
 
 <?php
 require_once '../controlador/examencontroller.php';
-$objapp=new appointmentcontroller();
+$objapp=new examenescontroller();
 $op="mostrar";
 if(isset($_REQUEST['op']))
     $op=$_REQUEST['op'];
