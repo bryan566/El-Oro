@@ -14,6 +14,37 @@
 
 					<div class="card-body">
 
+						<form action="insertar.php" class="form-register" method="POST" enctype="multipart/form-data">
+
+							<h1 class="form__title">Registro de Exámenes del Paciente</h1>
+							<div class="container--flex">
+								<label for="" class="form__label">Nombre</label>
+								<input type="text" class="form__input" name="nombre" required>
+							</div>
+							<div class="container--flex">
+								<label for="" class="form__label">Apellido</label>
+								<input type="text" class="form__input" name="apellido" required>
+							</div>
+							<div class="container--flex">
+								<label for="" class="form__label">Fecha</label>
+								<input type="date" class="form__input" name="fecha" required>
+							</div>
+
+							<input type="file" name="archivo" class="form__file" required>
+							<input type="submit" class="form__submit">
+
+
+						</form>
+
+
+
+
+
+
+
+
+
+
 						<!-- <form method="POST" autocomplete="off" enctype="multipart/form-data">
 							
 							<div class="row">
@@ -62,14 +93,14 @@
 
 				</form>--->
 
-				
+
+					</div>
+
 				</div>
 
 			</div>
 
 		</div>
-
 	</div>
-</div>
 </div>
 <!-- -->
