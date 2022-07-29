@@ -267,7 +267,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 													$db = $database->open();
 													try {
 														//$sql = 'SELECT customers.codpaci, customers.dnipa,customers.nombrep,customers.apellidop ,customers.seguro,customers.tele,customers.sexo,customers.usuario,customers.clave,customers.cargo,customers.estado, customers.fecha_create  FROM customers';
-														$sql = 'SELECT paciente.codpaci,paciente.cedula,paciente.nombrep,paciente.apellidop, paciente.sexo,paciente.telefono,paciente.ciudad,paciente.usuario,paciente.clave, paciente.cargo,paciente.estado FROM paciente';
+														$sql = 'SELECT paciente.codpaci,paciente.cedula,paciente.nombrep,paciente.apellidop, paciente.sexo,paciente.telefono,paciente.usuario,paciente.clave, paciente.cargo,paciente.estado FROM paciente';
 														foreach ($db->query($sql) as $row) {
 													?>
 															<tr>
