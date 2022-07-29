@@ -13,7 +13,7 @@
       antes de mostrar cualquier informacion en el DOM es por eso que inserto este
       codigo antes de la estructura del html, espero haber sido claro
     */
-    header('location: ../login.php');
+    //header('location: ../login.php');
   }
 
 ?>
