@@ -147,7 +147,7 @@
 							<div class="collapse" id="sidebarLayouts">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="../folder/customers.php">
+										<a href="../folder/examenes.php">
 											<span class="sub-item text-white">Mostrar</span>
 										</a>
 									</li>

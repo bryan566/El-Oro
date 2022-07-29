@@ -179,6 +179,24 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 							</ul>
 						</div>
 					</li>
+
+					<li class="nav-item">
+						<a data-toggle="collapse" href="#sidebarLayouts" class="text-white">
+							<i class="fas fa-male"></i>
+							<p>Examenes</p>
+						</a>
+						<div class="collapse" id="sidebarLayouts">
+							<ul class="nav nav-collapse">
+								<li>
+									<a href="../folder/examenes.php">
+										<span class="sub-item text-white">Mostrar</span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					
 					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
 					<!-- Submenú Usuarios
 						<li class="nav-item">
