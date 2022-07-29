@@ -380,7 +380,7 @@ $id=$_SESSION['id'];
 									</tr>
 									<?php
 									//}
-									}
+									//}
 									?>
 								</tbody>													
 							</table>
