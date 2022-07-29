@@ -1,4 +1,10 @@
 <!-- Agregar Nuevos Registros -->
+<?php include_once('../config/dbconect.php');
+
+?>
+
+<link rel="stylesheet" href="/assets/css/adjuntar.css">
+
 <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 
@@ -6,7 +12,7 @@
 			<div class="modal-header">
 
 				<center>
-					<h4 class="modal-title" id="myModalLabel">Registro de Citas</h4>
+					<h4 class="modal-title" id="myModalLabel"> Adjuntar Exámenes de Pacientes</h4>
 				</center>
 			</div>
 			<div class="modal-body">
@@ -16,7 +22,6 @@
 
 						<form action="insertar.php" class="form-register" method="POST" enctype="multipart/form-data">
 
-							<h1 class="form__title">Registro de Exámenes del Paciente</h1>
 							<div class="container--flex">
 								<label for="" class="form__label">Nombre</label>
 								<input type="text" class="form__input" name="nombre" required>
