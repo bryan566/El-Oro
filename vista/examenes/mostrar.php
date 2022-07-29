@@ -235,7 +235,7 @@
 										<h4 class="card-title">Mostrar</h4>
 										
 										<a href="#addRowModal" class="btn btn-primary btn-round ml-auto" data-toggle="modal">Nuevo</a>
-										<?php include('AgregarModal.php'); ?>
+										<?php include('agregar.php'); ?>
 									</div>
 									<!--<div class="card-tools">
 											<a href="../vista/appointment/reporte.php" class="btn btn-info btn-border btn-round btn-sm mr-2">
