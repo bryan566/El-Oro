@@ -1,35 +1,40 @@
-
 <?php
-  // Se prendio esta mrd :v
-  session_start();
+// Se prendio esta mrd :v
+session_start();
 
-  // Validamos que exista una session y ademas que el cargo que exista sea igual a 1 (Administrador)
-  if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1){
-    /*
+// Validamos que exista una session y ademas que el cargo que exista sea igual a 1 (Administrador)
+if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
+	/*
       Para redireccionar en php se utiliza header,
       pero al ser datos enviados por cabereza debe ejecutarse
       antes de mostrar cualquier informacion en el DOM es por eso que inserto este
       codigo antes de la estructura del html, espero haber sido claro
     */
-    header('location: ../login.php');
-  }
+	header('location: ../login.php');
+}
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Citas</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
+	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon" />
 
 	<!-- Fonts and icons -->
 	<script src="../assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
 		WebFont.load({
-			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css']},
+			google: {
+				"families": ["Lato:300,400,700,900"]
+			},
+			custom: {
+				"families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
+				urls: ['../assets/css/fonts.min.css']
+			},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -43,120 +48,121 @@
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="../assets/css/demo.css">
 </head>
+
 <body>
 
 	<div class="wrapper">
-		<div class="main-header">			
+		<div class="main-header">
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-			<div class="container-fluid">
-					<div class="user">							
-							<div class="info">
-								<a class="text-white" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-									<span>
-									<?php  echo ucfirst($_SESSION['nombre']); ?><br>
-										<span class="user-level">Administrador</span>									
-									</span>
-								</a>								
-							</div>
+				<div class="container-fluid">
+					<div class="user">
+						<div class="info">
+							<a class="text-white" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									<?php echo ucfirst($_SESSION['nombre']); ?><br>
+									<span class="user-level">Administrador</span>
+								</span>
+							</a>
+						</div>
 					</div>
-					<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-					<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
 					<!-- Submenú médicos -->
-					<li class="nav-item" >
-							<a data-toggle="collapse" href="#forms" class="text-white">
-								<i class="fas fa-user-md"></i> <!-- -->
-								<p>Médicos</p>
-								<!--<span class="caret"></span>-->
-							</a> 
-							<div class="collapse" id="forms">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="../folder/doctor.php">
-											<span class="sub-item text-white" >Mostrar</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-						<!-- Submenu Área médicas -->
-						<li class="nav-item">
-							<a data-toggle="collapse" href="#tables" class="text-white">
-								<i class="fas fa-table"></i>
-								<p>Especialidad</p>
-								<!--<span class="caret"></span>-->
-							</a>
-							<div class="collapse" id="tables">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="../folder/specialty.php">
-											<span class="sub-item text-white">Mostrar</span>
-										</a>
-									</li>
-									
-								</ul>
-							</div>
-						</li>
-						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-						
-						<!-- Submenú Citas -->
-						<li class="nav-item">
-							<a data-toggle="collapse" href="#base" class="text-white">
-								<i class="fas fa-layer-group"></i>
-								<p>Citas</p>
-								<!--<span class="caret"></span>-->
-							</a>
-							<div class="collapse" id="base">
-								<ul class="nav nav-collapse">
-									
-									<li>
-										<a href="../folder/appointment.php">
-											<span class="sub-item text-white">Mostrar</span>
-										</a>
-									</li>
-									
-								</ul>
-							</div>
-						</li>
-						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-						<!-- Submenú Pacientes-->
-						<li class="nav-item">
-							<a data-toggle="collapse" href="#sidebarLayouts" class="text-white">
-								<i class="fas fa-male"></i>
-								<p>Pacientes</p>								
-							</a>
-							<div class="collapse" id="sidebarLayouts">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="../folder/customers.php">
-											<span class="sub-item text-white">Mostrar</span>
-										</a>
-									</li>
-									
-								</ul>
-							</div>
-						</li>
-                        <a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-                        <!-- Submenú examenes-->
-						<li class="nav-item">
-							<a data-toggle="collapse" href="#sidebarLayouts" class="text-white">
-								<i class="fas fa-male"></i>
-								<p>Examenes</p>								
-							</a>
-							<div class="collapse" id="sidebarLayouts">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="../folder/examenes.php">
-											<span class="sub-item text-white">Mostrar</span>
-										</a>
-									</li>
-									
-								</ul>
-							</div>
-						</li>
-						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-						<!-- Submenú Usuarios
+					<li class="nav-item">
+						<a data-toggle="collapse" href="#forms" class="text-white">
+							<i class="fas fa-user-md"></i> <!-- -->
+							<p>Médicos</p>
+							<!--<span class="caret"></span>-->
+						</a>
+						<div class="collapse" id="forms">
+							<ul class="nav nav-collapse">
+								<li>
+									<a href="../folder/doctor.php">
+										<span class="sub-item text-white">Mostrar</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<!-- Submenu Área médicas -->
+					<li class="nav-item">
+						<a data-toggle="collapse" href="#tables" class="text-white">
+							<i class="fas fa-table"></i>
+							<p>Especialidad</p>
+							<!--<span class="caret"></span>-->
+						</a>
+						<div class="collapse" id="tables">
+							<ul class="nav nav-collapse">
+								<li>
+									<a href="../folder/specialty.php">
+										<span class="sub-item text-white">Mostrar</span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+
+					<!-- Submenú Citas -->
+					<li class="nav-item">
+						<a data-toggle="collapse" href="#base" class="text-white">
+							<i class="fas fa-layer-group"></i>
+							<p>Citas</p>
+							<!--<span class="caret"></span>-->
+						</a>
+						<div class="collapse" id="base">
+							<ul class="nav nav-collapse">
+
+								<li>
+									<a href="../folder/appointment.php">
+										<span class="sub-item text-white">Mostrar</span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<!-- Submenú Pacientes-->
+					<li class="nav-item">
+						<a data-toggle="collapse" href="#sidebarLayouts" class="text-white">
+							<i class="fas fa-male"></i>
+							<p>Pacientes</p>
+						</a>
+						<div class="collapse" id="sidebarLayouts">
+							<ul class="nav nav-collapse">
+								<li>
+									<a href="../folder/customers.php">
+										<span class="sub-item text-white">Mostrar</span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<!-- Submenú examenes-->
+					<li class="nav-item">
+						<a data-toggle="collapse" href="#sidebarLayouts" class="text-white">
+							<i class="fas fa-male"></i>
+							<p>Examenes</p>
+						</a>
+						<div class="collapse" id="sidebarLayouts">
+							<ul class="nav nav-collapse">
+								<li>
+									<a href="../folder/examenes.php">
+										<span class="sub-item text-white">Mostrar</span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<!-- Submenú Usuarios
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#user" class="text-white">
 								<i class="fas fa-user"></i>
@@ -172,9 +178,9 @@
 									
 								</ul>
 							</div>
-						</li>-->			
-                        
-                        <!-- Submenú horarios
+						</li>-->
+
+					<!-- Submenú horarios
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#calendar" class="text-white">
 								<i class="fas fa-calendar-alt"></i>
@@ -191,30 +197,30 @@
 								</ul>
 							</div>
 						</li>-->
-						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">	
-					
+					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+
 						<!-- Navbar buscador -->
-					
+
 
 
 						<li class="nav-item dropdown hidden-caret">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">								
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="../cerrarSesion.php" type="button" class="btn btn-outline-dark">Cerrar sesión</a>
 							</a>
 						</li>
-										
-							<ul class="dropdown-menu dropdown-user animated fadeIn">
-								<div class="dropdown-user-scroll scrollbar-outer">
-									<li>
-										<div class="user-box">								
-										</div>
-									</li>									
-								</div>
-							</ul>
+
+						<ul class="dropdown-menu dropdown-user animated fadeIn">
+							<div class="dropdown-user-scroll scrollbar-outer">
+								<li>
+									<div class="user-box">
+									</div>
+								</li>
+							</div>
+						</ul>
 						</li>
-					</ul>	
+					</ul>
 				</div>
 			</nav>
 			<!-- End Navbar -->
@@ -224,16 +230,16 @@
 			<div class="content">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Exámenes</h4>						
+						<h4 class="page-title">Exámenes</h4>
 					</div>
 					<div class="row">
-						
+
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
 										<h4 class="card-title">Mostrar</h4>
-										
+
 										<a href="#addRowModal" class="btn btn-primary btn-round ml-auto" data-toggle="modal">Nuevo</a>
 										<?php include('agregar.php'); ?>
 									</div>
@@ -246,24 +252,24 @@
 											</a>
 											
 										</div>-->
-					<div class="card-body">		
-								
-						<div class="table-responsive">
-							<table id="add-row" class="display table table-striped table-hover" >
-											<thead>
-												<tr>
-													<!--<th>#</th>-->
-													<th>Fecha</th>
-													<th>Médico</th>
-													<th>Paciente</th>
-													<th>Detalle</th>
-													<th>Archivo</th>
-													<!--<th>Estado</th>-->
-													
-													<th style="width: 2%">Action</th>
-												</tr>
-											</thead>
-											<!--<tfoot>
+									<div class="card-body">
+
+										<div class="table-responsive">
+											<table id="add-row" class="display table table-striped table-hover">
+												<thead>
+													<tr>
+														<!--<th>#</th>-->
+														<th>Fecha</th>
+														<th>Médico</th>
+														<th>Paciente</th>
+														<th>Detalle</th>
+														<th>Archivo</th>
+														<!--<th>Estado</th>-->
+
+														<th style="width: 2%">Action</th>
+													</tr>
+												</thead>
+												<!--<tfoot>
 												<tr>
 													<th>#</th>
 													<th>Fecha</th>
@@ -275,75 +281,76 @@
 													<th>Action</th>
 												</tr>
 											</tfoot>-->
-											
-											
-								<tbody>
-									<?php
-									foreach ($dato as $key => $value){
-										foreach ($value as $va) { ?>
-									<tr>
-										<!--<td><?php // echo $va['codcit'];?></td>-->
-										<td><?php echo $va['dates'];?></td>
-										<td><?php echo $va['hour'];?></td>
-										<td><?php echo $va ['nombrep'];?></td>
-										<td><?php echo $va ['nombre'];?></td>
-										<td><?php echo $va ['nombrees'];?></td>
-										
-							   
-										<td>
-									<?php    if($va['estado']==1)  { ?> 
-									<form  method="get" action="javascript:activo('<?php echo $va['codcit']; ?>')">
-										
-										<span class="text-success pl-3">Atendido</span>
-									</form>
-									<?php  }   else {?> 
 
-									<form  method="get" action="javascript:inactivo('<?php echo $va['codcit']; ?>')"> 
-										<button type="submit" class="btn btn-danger btn-xs">Pendiente</button>
-									</form>
-									<?php  } ?>                         
-									</td>
-                              		<td>
-										<div class="form-button-action">													
-											<button href="#deleteRowModal=<?php echo $va['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $va['codcit']; ?>">
-												<i class="fa fa-trash"></i>						
-											</button>													
+
+												<tbody>
+													<?php
+													foreach ($dato as $key => $value) {
+														foreach ($value as $va) { ?>
+															<tr>
+																<!--<td><?php // echo $va['codcit'];
+																		?></td>-->
+																<td><?php echo $va['dates']; ?></td>
+																<!--<td><?php echo $va['hour']; ?></td>-->
+																<td><?php echo $va['nombrep']; ?></td>
+																<td><?php echo $va['nombre']; ?></td>
+																<!--<td><?php echo $va['nombrees']; ?></td>-->
+
+
+																<!--<td>
+																	<?php if ($va['estado'] == 1) { ?>
+																		<form method="get" action="javascript:activo('<?php echo $va['codcit']; ?>')">
+
+																			<span class="text-success pl-3">Atendido</span>
+																		</form>
+																	<?php  } else { ?>
+
+																		<form method="get" action="javascript:inactivo('<?php echo $va['codcit']; ?>')">
+																			<button type="submit" class="btn btn-danger btn-xs">Pendiente</button>
+																		</form>
+																	<?php  } ?>
+																</td>
+																<td>
+																	<div class="form-button-action">
+																		<button href="#deleteRowModal=<?php echo $va['codcit']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $va['codcit']; ?>">
+																			<i class="fa fa-trash"></i>
+																		</button>
+																	</div>
+																</td>-->
+																<!--<?php include('editar.php'); ?>	-->
+															</tr>
+													<?php
+														}
+													}
+													?>
+												</tbody>
+											</table>
 										</div>
-									</td>
-									<!--<?php include('editar.php'); ?>	-->							
-									</tr>
-									<?php
-									}
-									}
-									?>
-								</tbody>													
-							</table>
-						</div>							
-					</div>
-				</div>
-								
-								
+									</div>
+								</div>
+
+
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
-			
+
 		</div>
-		
+
 	</div>
 	<!--   Core JS Files   -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="../assets/js/functions4.js"></script>
-  <script src="../assets/js/functions5.js"></script>
+	<script src="../assets/js/functions4.js"></script>
+	<script src="../assets/js/functions5.js"></script>
 	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="../assets/js/core/popper.min.js"></script>
 	<script src="../assets/js/core/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
 	<script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-	
+
 	<!-- jQuery Scrollbar -->
 	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	<!-- Datatables -->
@@ -352,32 +359,31 @@
 	<script src="../assets/js/atlantis.min.js"></script>
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="../assets/js/setting-demo2.js"></script>
-	<script >
+	<script>
 		$(document).ready(function() {
-			$('#basic-datatables').DataTable({
-			});
+			$('#basic-datatables').DataTable({});
 
-			$('#multi-filter-select').DataTable( {
+			$('#multi-filter-select').DataTable({
 				"pageLength": 5,
-				initComplete: function () {
-					this.api().columns().every( function () {
+				initComplete: function() {
+					this.api().columns().every(function() {
 						var column = this;
 						var select = $('<select class="form-control"><option value=""></option></select>')
-						.appendTo( $(column.footer()).empty() )
-						.on( 'change', function () {
-							var val = $.fn.dataTable.util.escapeRegex(
-								$(this).val()
+							.appendTo($(column.footer()).empty())
+							.on('change', function() {
+								var val = $.fn.dataTable.util.escapeRegex(
+									$(this).val()
 								);
 
-							column
-							.search( val ? '^'+val+'$' : '', true, false )
-							.draw();
-						} );
+								column
+									.search(val ? '^' + val + '$' : '', true, false)
+									.draw();
+							});
 
-						column.data().unique().sort().each( function ( d, j ) {
-							select.append( '<option value="'+d+'">'+d+'</option>' )
-						} );
-					} );
+						column.data().unique().sort().each(function(d, j) {
+							select.append('<option value="' + d + '">' + d + '</option>')
+						});
+					});
 				}
 			});
 
@@ -394,147 +400,132 @@
 					$("#addPosition").val(),
 					$("#addOffice").val(),
 					action
-					]);
+				]);
 				$('#addRowModal').modal('hide');
 
 			});
 		});
 	</script>
-	
-	  	<script>
-	function activo(codcit)
-{
-	var id=codcit;
-	$.ajax({
-        type:"GET",
-		url:"../assets/ajax/editar_estado_activo_cita.php?id="+id,
-    }).done(function(data){
-        window.location.href ='../folder/appointment.php';
-    })
 
-}
+	<script>
+		function activo(codcit) {
+			var id = codcit;
+			$.ajax({
+				type: "GET",
+				url: "../assets/ajax/editar_estado_activo_cita.php?id=" + id,
+			}).done(function(data) {
+				window.location.href = '../folder/appointment.php';
+			})
 
-// Editar estado inactivo
-function inactivo(codcit)
-{
-	var id=codcit;
-	$.ajax({
-		type:"GET",
-		url:"../assets/ajax/editar_estado_inactivo_cita.php?id="+id,
-    }).done(function(data){
-        window.location.href ='../folder/appointment.php';
-    })
-}
+		}
 
-	
+		// Editar estado inactivo
+		function inactivo(codcit) {
+			var id = codcit;
+			$.ajax({
+				type: "GET",
+				url: "../assets/ajax/editar_estado_inactivo_cita.php?id=" + id,
+			}).done(function(data) {
+				window.location.href = '../folder/appointment.php';
+			})
+		}
 	</script>
 
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-<!--------------------------------script nuevo--------------------------------------------------->
+	<!--------------------------------script nuevo--------------------------------------------------->
 
-<?php
-if(isset($_POST["agregar"])){
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "el oro";
+	<?php
+	if (isset($_POST["agregar"])) {
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "el oro";
 
-// Creamos la conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+		// Creamos la conexión
+		$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Revisamos la conexión
-if ($conn->connect_error) {
-       die("Connection failed: " . $conn->connect_error);
-   } 
-$dates=$_POST['dates'];
-$hour=$_POST['hour'];
-$codpaci=$_POST['codpaci'];
-$coddoc=$_POST['coddoc'];
-$codespe=$_POST['codespe'];
+		// Revisamos la conexión
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+		$dates = $_POST['dates'];
+		$hour = $_POST['hour'];
+		$codpaci = $_POST['codpaci'];
+		$coddoc = $_POST['coddoc'];
+		$codespe = $_POST['codespe'];
 
-// Realizamos la consulta para saber si coincide con uno de esos criterios
-$sql = "select * from cita where codcit='$codcit'";
-$result = mysqli_query($conn, $sql);
-?>
-
-
-<?php
- // Validamos si hay resultados
- if(mysqli_num_rows($result)>0)
- {
-        // Si es mayor a cero imprimimos que ya existe el usuario
-      
-        if($result){
-   ?>
-
-        <script type="text/javascript">
-
-Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Ya existe el registro a agregar!'
- 
-})
+		// Realizamos la consulta para saber si coincide con uno de esos criterios
+		$sql = "select * from cita where codcit='$codcit'";
+		$result = mysqli_query($conn, $sql);
+	?>
 
 
-        </script>
+		<?php
+		// Validamos si hay resultados
+		if (mysqli_num_rows($result) > 0) {
+			// Si es mayor a cero imprimimos que ya existe el usuario
 
-    <?php
-    }
-  
- }
- else
- {
-// Si no hay resultados, ingresamos el registro a la base de datos
-$sql2 = "INSERT INTO cita (dates,hour,codpaci,coddoc,codespe,estado)VALUES ('$dates','$hour','$codpaci','$coddoc','$codespe','0')";
+			if ($result) {
+		?>
+
+				<script type="text/javascript">
+					Swal.fire({
+						icon: 'error',
+						title: 'Oops...',
+						text: 'Ya existe el registro a agregar!'
+
+					})
+				</script>
+
+				<?php
+			}
+		} else {
+			// Si no hay resultados, ingresamos el registro a la base de datos
+			$sql2 = "INSERT INTO cita (dates,hour,codpaci,coddoc,codespe,estado)VALUES ('$dates','$hour','$codpaci','$coddoc','$codespe','0')";
 
 
-if (mysqli_query($conn, $sql2)) {
-      
-       if($sql2){
-   ?>
+			if (mysqli_query($conn, $sql2)) {
 
-        <script type="text/javascript">
-             
-Swal.fire({
-  position: 'top-end',
-  icon: 'success',
-  title: 'Agregado correctamente',
-  showConfirmButton: false,
-  timer: 1500
-}).then(function() {
-            window.location = "../folder/appointment.php";
-        });
-        </script>
+				if ($sql2) {
+				?>
 
-    <?php
-    }
-    else{
-       ?>
-       <script type="text/javascript">
-        Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'No se pudo guardar!'
- 
-})
-       </script>
-       <?php
+					<script type="text/javascript">
+						Swal.fire({
+							position: 'top-end',
+							icon: 'success',
+							title: 'Agregado correctamente',
+							showConfirmButton: false,
+							timer: 1500
+						}).then(function() {
+							window.location = "../folder/appointment.php";
+						});
+					</script>
 
-    }
-    
-} else {
-      
-       echo "Error: " . $sql2 . "" . mysqli_error($conn);
-}
+				<?php
+				} else {
+				?>
+					<script type="text/javascript">
+						Swal.fire({
+							icon: 'error',
+							title: 'Oops...',
+							text: 'No se pudo guardar!'
 
-}
-// Cerramos la conexión
-$conn->close();
+						})
+					</script>
+	<?php
 
-}
-?>
+				}
+			} else {
+
+				echo "Error: " . $sql2 . "" . mysqli_error($conn);
+			}
+		}
+		// Cerramos la conexión
+		$conn->close();
+	}
+	?>
 </body>
+
 </html>
