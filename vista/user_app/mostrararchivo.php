@@ -345,8 +345,8 @@ $id=$_SESSION['id'];
 											
 								<tbody>
 									<?php
-									foreach ($dato as $key => $value){
-										foreach ($value as $va) { ?>
+									//foreach ($dato as $key => $value){
+									//	foreach ($value as $va) { ?>
 									<tr>
 										<!--<td><?php // echo $va['codcit'];?></td>-->
 										<td><?php echo $va['dates'];?></td>
