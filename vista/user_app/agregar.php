@@ -18,23 +18,7 @@
 				
 		<form method="POST" autocomplete="off" enctype="multipart/form-data">
 					<div class="row">													
-							<!--<div class="col-md-6">
-							<div class="form-group form-group-default">
-								<label>Medicos</label>
-								<select class="form-control" id="doctor"  name="coddoc">				
-								</select>
-							</div>
-						</div>-->
-
-						<div class="col-md-4">
-											<div class="form-group form-group-default">
-												<label>Sexo</label>
-												<select class="form-control" value="<?php echo $d->sexo; ?>" name="sexo" id="sexo">
-													<option value="<?php echo $d->sexo; ?>"><?php echo $d->sexo; ?></option>
-													<option>Femenino</option>
-												</select>
-											</div>
-										</div>
+											
 
 						<div class="col-md-6">
 									<div class="form-group form-group-default">
@@ -44,14 +28,16 @@
 									</div>
 								</div>
 
-								<div class="col-md-6">
-									<div class="form-group form-group-default">
-										<label>Médico</label>
-										<select class="form-control" value="<?php echo $d->sexo; ?>" name="sexo" id="sexo">
-										<option value="<?php echo $d->sexo; ?>"><?php echo $d->sexo; ?></option>
-										</select>
-									</div>
-								</div>									
+
+						<div class="col-md-6">
+							<div class="form-group form-group-default">
+								<label>Medicos</label>
+								<select class="form-control" id="doctor"  name="coddoc">				
+								</select>
+							</div>
+						</div>
+
+
 								
 						
 						<div class="col-md-12">
