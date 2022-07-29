@@ -238,6 +238,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 														<th>Cédula</th>
 														<th>Paciente</th>
 														<th>Genero</th>
+														<th>Correo</th>
 														<th>Teléfono</th>
 														<th>Estado</th>
 														<!--<th>Dirección</th>-->
@@ -267,7 +268,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 													$db = $database->open();
 													try {
 														//$sql = 'SELECT customers.codpaci, customers.dnipa,customers.nombrep,customers.apellidop ,customers.seguro,customers.tele,customers.sexo,customers.usuario,customers.clave,customers.cargo,customers.estado, customers.fecha_create  FROM customers';
-														$sql = 'SELECT paciente.codpaci,paciente.cedula,paciente.nombrep,paciente.apellidop, paciente.sexo,paciente.telefono,paciente.usuario,paciente.clave, paciente.cargo,paciente.estado FROM paciente';
+														$sql = 'SELECT paciente.codpaci,paciente.cedula,paciente.nombrep,paciente.apellidop, paciente.sexo,paciente.telefono,paciente.fechanaci,paciente.correo,paciente.direccion,paciente.ciudad,paciente.usuario,paciente.clave, paciente.cargo,paciente.estado FROM paciente';
 														foreach ($db->query($sql) as $row) {
 													?>
 															<tr>
@@ -276,6 +277,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 																<td><?php echo $row['cedula']; ?></td>
 																<td><?php echo $row['nombrep']; ?>&nbsp;<?php echo $row['apellidop']; ?></td>
 																<td><?php echo $row['sexo']; ?></td>
+																<td><?php echo $row['correo']; ?></td>
 																<td><?php echo $row['telefono']; ?></td>
 
 																<td>
@@ -291,8 +293,6 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 																	<?php  } ?>
 																</td>
 
-
-																<!--<td><?php echo $row['direccion']; ?></td>-->
 
 																<td>
 																	<div class="form-button-action">
