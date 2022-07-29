@@ -73,7 +73,7 @@ $id=$_SESSION['id'];
 								<a class="text-white" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 									<span>
 									<?php  echo ucfirst($_SESSION['nombre']); ?><br>
-										<span class="user-level">Área Pacientes</span>									
+										<span class="user-level">Paciente</span>									
 									</span>
 								</a>								
 							</div>
@@ -310,14 +310,14 @@ $id=$_SESSION['id'];
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">Mis citas</h4>
+									<h4 class="card-title">Citas Agendadas</h4>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
 										<table id="add-row" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-													<!--<th>#</th>-->
+													<th>#</th>
 													<th>Cédula</th>
 													<th>Paciente</th>
 													<th>Fecha</th>
