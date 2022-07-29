@@ -325,7 +325,7 @@ $id=$_SESSION['id'];
 											<thead>
 												<tr>
 													<!--<th>#</th>-->
-													<th>Cédula</th>
+													<th>Cédulaaaaaaaaaaa</th>
 													<th>Paciente</th>
 													<th>Fecha</th>
 													<th>Hora</th>
