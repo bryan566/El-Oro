@@ -105,8 +105,8 @@ $id=$_SESSION['id'];
 							<div class="collapse" id="tables">
 								<ul class="nav nav-collapse">
 									<li>
-											<!--<a href="../user_app/mostrararchivo.php">-->
-											<a href="../user_app/mostrar.php">
+											<a href="../user_app/mostrararchivo.php">
+											<!--<a href="../user_app/mostrar.php">-->
 											<span class="sub-item text-white">Mostraaaaaaaaaaaaar</span>
 										</a>
 									</li>
