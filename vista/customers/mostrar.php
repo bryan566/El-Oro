@@ -239,6 +239,8 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 														<th>Paciente</th>
 														<th>Genero</th>
 														<th>Correo</th>
+														<th>Direccion</th>
+														<th>Ciudad</th>
 														<th>Teléfono</th>
 														<th>Estado</th>
 														<!--<th>Dirección</th>-->
