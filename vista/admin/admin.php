@@ -91,26 +91,7 @@
 									
 								</ul>
 							</div>
-						</li>
-
-						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-						<!-- Submenú horarios
-						<li class="nav-item">
-							<a data-toggle="collapse" href="#calendar" class="text-white">
-								<i class="fas fa-calendar-alt"></i>
-								<p>Horarios</p>								
-							</a>
-							<div class="collapse" id="calendar">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="../../folder/horario.php">
-											<span class="sub-item text-white">Mostrar</span>
-										</a>
-									</li>
-									
-								</ul>
-							</div>
-						</li>-->
+						</li>						
 						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
 						<!-- Submenú Citas -->
 						<li class="nav-item">
@@ -149,6 +130,24 @@
 							</div>
 						</li><!---->
 						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+						<!-- Submenú Usuarios-->
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#user" class="text-white">
+								<i class="fas fa-user"></i>
+								<p>Exámenes</p>									
+							</a>
+							<div class="collapse" id="user">
+								<ul class="nav nav-collapse">
+									<li>
+										    <a href="../../folder/usuarios.php">
+											<span class="sub-item text-white">Mostrar</span>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+						</li>
+												
 						<!-- Submenú Usuarios
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#user" class="text-white">
@@ -167,6 +166,24 @@
 							</div>
 						</li>-->
 
+						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+						<!-- Submenú horarios
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#calendar" class="text-white">
+								<i class="fas fa-calendar-alt"></i>
+								<p>Horarios</p>								
+							</a>
+							<div class="collapse" id="calendar">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="../../folder/horario.php">
+											<span class="sub-item text-white">Mostrar</span>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+						</li>-->
 					
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">						
 						<li class="nav-item dropdown hidden-caret">
