@@ -25,6 +25,6 @@ else{
 	$_SESSION['message'] = 'Llene el formulario';
 }
 
-header('location: ../../folder/doctor.php');
+header('location: ../../folder/examen.php');
 	
 ?>
