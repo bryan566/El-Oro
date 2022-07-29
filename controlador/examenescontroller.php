@@ -11,13 +11,13 @@ class examenescontroller{
         $examen=new Modelo();
 
         $dato=$examen->mostrar("horario", "1");
-        require_once '../vista/user_app/mostrararchivo.php';
+        require_once '../vista/examenes/mostrar.php';
     }
 
 
     //INSERTAR
   public  function nuevo(){
-        require_once '../vista/user_app/nuevo.php';
+        require_once '../vista/examenes/nuevo.php';
     }
     //aca ando haciendo
     public function recibir(){
