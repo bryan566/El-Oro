@@ -13,7 +13,15 @@
 				<div class="container-fluid">
 
 					<div class="card-body">
-						<form method="POST" autocomplete="off" enctype="multipart/form-data">							
+						<form method="POST" autocomplete="off" enctype="multipart/form-data">
+							
+							<div class="row">
+								<!-- <div class="col-sm-12">
+									<div class="form-group form-group-default">
+										<label>Fecha</label>
+										<input name="dates" type="date" class="form-control" value="01-01-2020" min="2022-07-20" max="2030-01-01" required placeholder="Ingrese fecha">
+									</div>
+								</div>-->
 								
 								<div class="col-md-6">
 									<div class="form-group form-group-default">
@@ -30,14 +38,12 @@
 										</select>
 									</div>
 								</div>
-
-								<div class="row">
+								
 								<div class="col-sm-12">
 									<div class="form-group form-group-default">
 										<label>Detalle</label>
-										<input name="fecha" type="text" class="form-control"  required="" placeholder="Ingrese el detalle">
+										<input name="dates" type="text" class="form-control" required placeholder="Ingrese el detalle">
 									</div>
-								</div>
 
 
 							</div>
