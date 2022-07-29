@@ -1,26 +1,46 @@
 
 
-<!-- Adjuntar Archivos -->
+<!-- Agregar Nuevos Registros -->
 <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-	
-        <div class="modal-content">
-            <div class="modal-header">
-               
-                <center><h4 class="modal-title" id="myModalLabel">Adjuntar Archivos</h4></center>
-            </div>
-            <div class="modal-body">
-			<div class="container-fluid">
-			
-                <div class="card-body">
-				
+	<div class="modal-dialog">
 
-				
-		<form method="POST" autocomplete="off" enctype="multipart/form-data">
-					<div class="row">													
-											
+		<div class="modal-content">
+			<div class="modal-header">
 
-						<div class="col-md-6">
+				<center>
+					<h4 class="modal-title" id="myModalLabel">Registro de Citas</h4>
+				</center>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+
+					<div class="card-body">
+						<form method="POST" autocomplete="off" enctype="multipart/form-data">
+
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group form-group-default">
+										<label>Fecha</label>
+										<input name="dates" type="date" class="form-control" value="01-01-2020" min="2022-07-20" max="2030-01-01" required placeholder="Ingrese fecha">
+									</div>
+								</div>
+
+								<div class="col-md-6 pr-0">
+									<div class="form-group form-group-default">
+										<label>Hora</label>
+										<input name="hour" type="time" class="form-control" required placeholder="Ingrese la hora">
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group form-group-default">
+										<label>Paciente</label>
+										<select class="form-control" id="paciente" required name="codpaci">
+										</select>
+									</div>
+								</div>
+
+								<div class="col-md-6">
 									<div class="form-group form-group-default">
 										<label>Especialidad</label>
 										<select class="form-control" id="continentes" required name="codespe">
@@ -28,55 +48,38 @@
 									</div>
 								</div>
 
+								<div class="col-md-6">
+									<div class="form-group form-group-default">
+										<label>Médico</label>
+										<select class="form-control" id="paises" required name="coddoc">
+										</select>
+									</div>
+								</div>
 
-						<div class="col-md-6">
-							<div class="form-group form-group-default">
-								<label>Medicos</label>
-								<select class="form-control" id="doctor"  name="coddoc">				
-								</select>
+
+
 							</div>
-						</div>
+
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar
 
 
-								
-						
-						<div class="col-md-12">
-							<div class="form-group">
-								<label class="bmd-label-floating">Descripción</label>
-								<input type="text" name="descripcion" class="form-control" placeholder="Ingresa una descripción">
-							</div>
-						</div>
-
-						<div class="col-md-12">
-							<div class="form-group">
-								<label class="bmd-label-floating">Examinar</label>
-								<input type="file" name="url" accept="application/pdf">
-								<!--<input type="submit">-->
-							</div>
-						</div>
+					</button>
+					<button type="submit" name="agregar" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar Registro</button>
 
 
 
+					</form>
+				</div>
 
-					</div>			
-            </div>
+			</div>
 
-        </div>
-		 <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar
-				
-				
-				</button>
-                <button type="submit" name="agregar" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar Registro</button>
-			</form>
-			
-                </div>
-			
-            </div>
+		</div>
 
-        </div>
-		
-    </div>
+	</div>
 </div>
 </div>
 <!-- -->
