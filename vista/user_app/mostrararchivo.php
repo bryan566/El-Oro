@@ -295,32 +295,31 @@ $id=$_SESSION['id'];
 			<div class="content">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Citas</h4>
-						<ul class="breadcrumbs">
-							<li class="nav-home">
-								<a href="../vista/admin/admin.php">
-									<i class="flaticon-home"></i>
-								</a>
-							</li>
-							<li class="separator">
-								<i class="flaticon-right-arrow"></i>
-							</li>
-							
-							
-							<li class="nav-item">
-								<a href="#">Mostrar</a>
-							</li>
-						</ul>
+						<h4 class="page-title">Exámenes</h4>						
 					</div>
 					<div class="row">
 						
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">Mis citas</h4>
-								</div>
-								<div class="card-body">
-								<div class="table-responsive">
+									<div class="d-flex align-items-center">
+										<h4 class="card-title">Mostraaaar</h4>
+										
+										<a href="#addRowModal" class="btn btn-primary btn-round ml-auto" data-toggle="modal">Nuevo</a>
+										<?php include('agregar.php'); ?>
+									</div>
+									<!--<div class="card-tools">
+											<a href="../vista/appointment/reporte.php" class="btn btn-info btn-border btn-round btn-sm mr-2">
+												<span class="btn-label">
+													<i class="fa fa-pencil"></i>
+												</span>
+												Export
+											</a>
+											
+										</div>-->
+					<div class="card-body">		
+								
+						<div class="table-responsive">
 							<table id="add-row" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
