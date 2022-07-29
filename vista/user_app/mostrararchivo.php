@@ -515,14 +515,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
        die("Connection failed: " . $conn->connect_error);
    } 
-$dates=$_POST['dates'];
-$hour=$_POST['hour'];
-$codpaci=$_POST['codpaci'];
 $coddoc=$_POST['coddoc'];
-$codespe=$_POST['codespe'];
+$codpaci=$_POST['codpaci'];
+$codespe=$_POST['decripcion'];
+$hour=$_POST['urlpdf'];
+
+
 
 // Realizamos la consulta para saber si coincide con uno de esos criterios
-$sql = "select * from cita where codcit='$codcit'";
+//$sql = "select * from cita where codcit='$codcit'";
+$sql = "SELECT * FROM `examen` WHERE examen.codpaci='$codpaci'";
 $result = mysqli_query($conn, $sql);
 ?>
 
