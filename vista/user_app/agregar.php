@@ -12,33 +12,18 @@
 				</center>
 			</div>
 			<div class="modal-body">
-				<div class="container-fluid">
+				<div class="container-fluid"><!-- -->
 
 					<div class="card-body">
 						<form method="POST" autocomplete="off" enctype="multipart/form-data">
 
-							<div class="row">
+							<!--<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group form-group-default">
 										<label>Fecha</label>
 										<input name="dates" type="date" class="form-control" value="01-01-2020" min="2022-07-20" max="2030-01-01" required placeholder="Ingrese fecha">
 									</div>
-								</div>
-
-								<div class="col-md-6 pr-0">
-									<div class="form-group form-group-default">
-										<label>Hora</label>
-										<input name="hour" type="time" class="form-control" required placeholder="Ingrese la hora">
-									</div>
-								</div>
-								
-								<div class="col-md-6">
-									<div class="form-group form-group-default">
-										<label>Paciente</label>
-										<select class="form-control" id="paciente" required name="codpaci">
-										</select>
-									</div>
-								</div>
+								</div>	 -->						
 
 								<div class="col-md-6">
 									<div class="form-group form-group-default">
@@ -56,6 +41,12 @@
 									</div>
 								</div>
 
+								<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group form-group-default">
+										<label>Detalle</label>
+										<input name="datalle" type="text" class="form-control"  required placeholder="Ingrese fecha">
+									</div>
 
 
 							</div>
