@@ -319,11 +319,11 @@ $id=$_SESSION['id'];
 											<thead>
 												<tr>
 													<!--<th>#</th>-->
-													<th>Fecha</th>
+													<!--<th>Fecha</th>-->
 													<th>Médico</th>
 													<th>Paciente</th>
 													<th>Detalle</th>
-													<th>Archivo</th>
+													<!--<th>Archivo</th>-->
 													<!--<th>Estado</th>-->
 													
 													<th style="width: 2%">Action</th>
