@@ -299,8 +299,8 @@ $id=$_SESSION['id'];
 							<div class="card">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
-										<h4 class="card-title">Mostrar</h4>
-										
+										<h4 class="card-title">Paciente </h4>
+										<?php  echo ucfirst($_SESSION['nombre']); ?><br>
 										<a href="#addRowModal" class="btn btn-primary btn-round ml-auto" data-toggle="modal">Nuevo</a>
 										<?php include('agregar.php'); ?>
 									</div>
