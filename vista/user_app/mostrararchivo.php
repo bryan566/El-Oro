@@ -398,8 +398,11 @@ $id=$_SESSION['id'];
 									<?php  } ?>                         
 									</td>
                               		<td>
-									  <button class="btn btn-primary" type="submit">Guardar</button>
-										<!--<div class="form-button-action">													
+									  	<button type="button" class="btn btn-default">
+      										<span class="glyphicon .glyphicon-download"></span>
+										</button>
+									  <!--<button class="btn btn-primary" type="submit">Guardar</button>
+										<div class="form-button-action">		glyphicon .glyphicon-download											
 											<button href="#deleteRowModal=<?php // echo $row['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php // echo $row['codcit']; ?>">
 												<i class="fa fa-trash"></i>						
 											</button>													
