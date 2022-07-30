@@ -320,8 +320,8 @@ $id=$_SESSION['id'];
 												<tr>
 													<!--<th>#</th>-->
 													<!--<th>Fecha</th>-->
-													<th>Médico</th>
-													<th>Paciente</th>
+													<th>Médicos</th>
+													<th>Especialidad</th>
 													<th>Detalle</th>
 													<!--<th>Archivo</th>-->
 													<!--<th>Estado</th>-->
@@ -354,33 +354,31 @@ $id=$_SESSION['id'];
 														cita.codespe=especialidad.codespe WHERE paciente.codpaci='$id'";
 									$query = mysqli_query($conex, $sql);
 								?>
-									<?php
-									//foreach ($dato as $key => $value){
-									//	foreach ($value as $va) { ?>
+									
 									<tr>
 										<!--<td><?php // echo $va['codcit'];?></td>-->
 										<td><?php echo $row['nombre']; ?> &nbsp;<?php echo $row['apellido']; ?></td>																		
-										<td><?php echo $va ['nombrep'];?></td>
-										<td><?php echo $va ['decripcion'];?></td>
+										<td><?php echo $row ['nombrees'];?></td>
+										<td><?php echo $row ['decripcion'];?></td>
 										<!--<td><?php // echo $va ['urlpdf'];?></td>-->
 										
 							   
 										<td>
-									<?php    if($va['estado']==1)  { ?> 
-									<form  method="get" action="javascript:activo('<?php echo $va['codcit']; ?>')">
+									<?php    if($row['estado']==1)  { ?> 
+									<form  method="get" action="javascript:activo('<?php echo $row['codcit']; ?>')">
 										
 										<span class="text-success pl-3">Atendido</span>
 									</form>
 									<?php  }   else {?> 
 
-									<form  method="get" action="javascript:inactivo('<?php echo $va['codcit']; ?>')"> 
+									<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
 										<button type="submit" class="btn btn-danger btn-xs">Pendiente</button>
 									</form>
 									<?php  } ?>                         
 									</td>
                               		<td>
 										<div class="form-button-action">													
-											<button href="#deleteRowModal=<?php echo $va['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $va['codcit']; ?>">
+											<button href="#deleteRowModal=<?php echo $row['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $row['codcit']; ?>">
 												<i class="fa fa-trash"></i>						
 											</button>													
 										</div>
