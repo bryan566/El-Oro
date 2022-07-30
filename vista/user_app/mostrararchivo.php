@@ -364,11 +364,10 @@ $id=$_SESSION['id'];
 										<!--<td><?php // echo $va['codcit'];?></td>-->
 										<td><?php echo $row['nombre']; ?> &nbsp;<?php echo $row['apellido']; ?></td>																		
 										<td><?php echo $row ['nombrees'];?></td>
-										<td><?php echo $row ['decripcion'];?></td>
+										<!--<td><?php // echo $row ['decripcion'];?></td>-->
 										<td>
 											<div class="col-sm-12">
-												<div class="form-group form-group-default">
-													<!--<label>Detalle</label>-->
+												<div class="form-group form-group-default">													
 													<input name="datalle" type="text" class="form-control"  required placeholder="Ingrese el detalle">
 												</div>
 											</div>
@@ -377,14 +376,14 @@ $id=$_SESSION['id'];
 							   
 										<td>
 									<?php    if($row['estado']==1)  { ?> 
-									<form  method="get" action="javascript:activo('<?php echo $row['codcit']; ?>')">
+									<!--<form  method="get" action="javascript:activo('<?php // echo $row['codcit']; ?>')">
 										
 										<span class="text-success pl-3">Atendido</span>
-									</form>
+									</form>-->
 									<?php  }   else {?> 
 
 									<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
-										<button type="submit" class="btn btn-danger btn-xs">Pendiente</button>
+										<button type="submit" class="btn btn-danger btn-xs">Cargar</button>
 									</form>
 									<?php  } ?>                         
 									</td>
