@@ -320,11 +320,11 @@ $id=$_SESSION['id'];
 												<tr>
 													<!--<th>#</th>-->
 													<!--<th>Fecha</th>-->
-													<th align="center">Médicos</th>
-													<th align="center">Especialidad</th>
-													<th align="center">Detalle</th>
-													<th align="center">Archivo</th>
-													<!--<th>Estado</th>-->
+													<th>Médicos</th>
+													<th>Especialidad</th>
+													<th>Detalle</th>
+													<th>Archivo</th>
+													<th>Acción</th>
 													
 													<!--<th style="width: 2%" align="center">Acción</th>-->
 												</tr>
@@ -390,8 +390,9 @@ $id=$_SESSION['id'];
 											<!--<input type="submit">-->
 										</div>
 									</div>
+									<button class="btn btn-primary" type="submit">Guardar</button>
 
-									<!--<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
+									<!--<form  method="get" action="javascript:inactivo('<?php // echo $row['codcit']; ?>')"> 
 										<button type="submit" class="btn btn-danger btn-xs">Cargar</button>
 									</form>-->
 									<?php  } ?>                         
