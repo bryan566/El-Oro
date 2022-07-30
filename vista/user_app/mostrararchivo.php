@@ -299,10 +299,10 @@ $id=$_SESSION['id'];
 							<div class="card">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
-										<h4 class="card-title">Paciente </h4>
-										<?php  echo ucfirst($_SESSION['nombre']); ?><br>
-										<a href="#addRowModal" class="btn btn-primary btn-round ml-auto" data-toggle="modal">Nuevo</a>
-										<?php include('agregar.php'); ?>
+										<h4 class="card-title">Paciente:    <?php  echo ucfirst($_SESSION['nombre']); ?>  </h4>
+										
+										<!--<a href="#addRowModal" class="btn btn-primary btn-round ml-auto" data-toggle="modal">Nuevo</a>
+										<?php // include('agregar.php'); ?>-->
 									</div>
 									<!--<div class="card-tools">
 											<a href="../vista/appointment/reporte.php" class="btn btn-info btn-border btn-round btn-sm mr-2">
