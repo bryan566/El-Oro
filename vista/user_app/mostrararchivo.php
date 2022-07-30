@@ -390,7 +390,7 @@ $id=$_SESSION['id'];
 											<!--<input type="submit">-->
 										</div>
 									</div>
-									<button class="btn btn-primary" type="submit">Guardar</button>
+									
 
 									<!--<form  method="get" action="javascript:inactivo('<?php // echo $row['codcit']; ?>')"> 
 										<button type="submit" class="btn btn-danger btn-xs">Cargar</button>
@@ -398,6 +398,7 @@ $id=$_SESSION['id'];
 									<?php  } ?>                         
 									</td>
                               		<td>
+									  <button class="btn btn-primary" type="submit">Guardar</button>
 										<!--<div class="form-button-action">													
 											<button href="#deleteRowModal=<?php // echo $row['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php // echo $row['codcit']; ?>">
 												<i class="fa fa-trash"></i>						
