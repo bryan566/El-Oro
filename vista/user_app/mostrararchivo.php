@@ -345,50 +345,58 @@ $id=$_SESSION['id'];
 											
 								<tbody>
 								<?php
-									if (isset($_SESSION['id'])) {											
-									include "../config/conex.php";
-									$sql = "SELECT cita.codcit, cita.dates, cita.hour, paciente.codpaci, 
-														paciente.cedula, paciente.nombrep, paciente.apellidop, doctor.coddoc, doctor.cedula, doctor.nombre, 
-														doctor.apellido, especialidad.codespe, especialidad.nombrees, cita.estado FROM cita INNER JOIN paciente ON 
-														cita.codpaci=paciente.codpaci INNER JOIN doctor ON cita.coddoc=doctor.coddoc INNER JOIN especialidad ON 
-														cita.codespe=especialidad.codespe WHERE paciente.codpaci='$id'";
-									$query = mysqli_query($conex, $sql);
-								?>
-									
-									<tr>
-										<!--<td><?php // echo $va['codcit'];?></td>-->
-										<td><?php echo $row['nombre']; ?> &nbsp;<?php echo $row['apellido']; ?></td>																		
-										<td><?php echo $row ['nombrees'];?></td>
-										<td><?php echo $row ['decripcion'];?></td>
-										<!--<td><?php // echo $va ['urlpdf'];?></td>-->
-										
-							   
-										<td>
-									<?php    if($row['estado']==1)  { ?> 
-									<form  method="get" action="javascript:activo('<?php echo $row['codcit']; ?>')">
-										
-										<span class="text-success pl-3">Atendido</span>
-									</form>
-									<?php  }   else {?> 
+												if (isset($_SESSION['id'])) {											
+												include "../config/conex.php";
+												$sql = "SELECT cita.codcit, cita.dates, cita.hour, paciente.codpaci, 
+																	paciente.cedula, paciente.nombrep, paciente.apellidop, doctor.coddoc, doctor.cedula, doctor.nombre, 
+																	doctor.apellido, especialidad.codespe, especialidad.nombrees, cita.estado FROM cita INNER JOIN paciente ON 
+																	cita.codpaci=paciente.codpaci INNER JOIN doctor ON cita.coddoc=doctor.coddoc INNER JOIN especialidad ON 
+																	cita.codespe=especialidad.codespe WHERE paciente.codpaci='$id'";
+												$query = mysqli_query($conex, $sql);
+											?>
+											<?php
+													if (mysqli_num_rows($query) > 0) {
+														while ($row = mysqli_fetch_assoc($query)) {
+													?>
+													<!--<td><?php // echo $row['codcit']; ?></td>-->
+													<td><?php echo $row['cedula']; ?></td>
+													<td><?php echo $row['nombrep']; ?> &nbsp;<?php echo $row['apellidop']; ?></td>
 
-									<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
-										<button type="submit" class="btn btn-danger btn-xs">Pendiente</button>
-									</form>
-									<?php  } ?>                         
-									</td>
-                              		<td>
-										<div class="form-button-action">													
-											<button href="#deleteRowModal=<?php echo $row['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $row['codcit']; ?>">
-												<i class="fa fa-trash"></i>						
-											</button>													
-										</div>
-									</td>
-									<?php // include('editar.php'); ?>								
-									</tr>
-									<?php
-									}
-									//}
-									?>
+													<td><?php echo $row['dates']; ?></td>
+													<td><?php echo $row['hour']; ?></td>
+													
+													<td><?php echo $row['nombre']; ?>&nbsp;<?php echo $row['apellido']; ?></td>
+													<td><?php echo $row['nombrees']; ?></td>
+													<td>
+														<?php    if($row['estado']==1)  { ?> 
+														<form  method="get" action="javascript:activo('<?php echo $row['codcit']; ?>')">
+															<span class="badge badge-success">Atendido</span>
+
+														</form>
+														<?php  }   else {?> 
+
+														<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
+															
+															<span class="badge badge-danger">Pendiente</span>
+														</form>
+														<?php  }  ?>                         
+													</td>
+													<?php
+															}
+														} else {
+													?>															
+													<div class="message">
+														
+														<p class="alert alert-warning">No cuenta con ninguna cita</p>
+													</div>
+													<?php
+													}
+													?>														
+												<?php
+												} else {
+													header('location:mostrar.php');
+												}
+											?>
 								</tbody>													
 							</table>
 						</div>			
