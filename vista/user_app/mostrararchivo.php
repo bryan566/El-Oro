@@ -344,15 +344,25 @@ $id=$_SESSION['id'];
 											
 											
 								<tbody>
+								<?php
+									if (isset($_SESSION['id'])) {											
+									include "../config/conex.php";
+									$sql = "SELECT cita.codcit, cita.dates, cita.hour, paciente.codpaci, 
+														paciente.cedula, paciente.nombrep, paciente.apellidop, doctor.coddoc, doctor.cedula, doctor.nombre, 
+														doctor.apellido, especialidad.codespe, especialidad.nombrees, cita.estado FROM cita INNER JOIN paciente ON 
+														cita.codpaci=paciente.codpaci INNER JOIN doctor ON cita.coddoc=doctor.coddoc INNER JOIN especialidad ON 
+														cita.codespe=especialidad.codespe WHERE paciente.codpaci='$id'";
+									$query = mysqli_query($conex, $sql);
+								?>
 									<?php
 									//foreach ($dato as $key => $value){
 									//	foreach ($value as $va) { ?>
 									<tr>
 										<!--<td><?php // echo $va['codcit'];?></td>-->
-										<td><?php echo $va['nombre'];?></td>										
+										<td><?php echo $row['nombre']; ?> &nbsp;<?php echo $row['apellido']; ?></td>																		
 										<td><?php echo $va ['nombrep'];?></td>
 										<td><?php echo $va ['decripcion'];?></td>
-										<td><?php echo $va ['urlpdf'];?></td>
+										<!--<td><?php // echo $va ['urlpdf'];?></td>-->
 										
 							   
 										<td>
@@ -378,7 +388,7 @@ $id=$_SESSION['id'];
 									<?php // include('editar.php'); ?>								
 									</tr>
 									<?php
-									//}
+									}
 									//}
 									?>
 								</tbody>													
