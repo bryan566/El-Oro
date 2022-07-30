@@ -323,10 +323,10 @@ $id=$_SESSION['id'];
 													<th align="center">Médicos</th>
 													<th align="center">Especialidad</th>
 													<th align="center">Detalle</th>
-													<!--<th>Archivo</th>-->
+													<th align="center">Archivo</th>
 													<!--<th>Estado</th>-->
 													
-													<th style="width: 2%" align="center">Acción</th>
+													<!--<th style="width: 2%" align="center">Acción</th>-->
 												</tr>
 											</thead>
 											<!--<tfoot>
@@ -382,17 +382,26 @@ $id=$_SESSION['id'];
 									</form>-->
 									<?php  }   else {?> 
 
-									<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
+
+									<div class="col-md-12">
+										<div class="form-group">
+											<label class="bmd-label-floating">Examinar</label>
+											<input type="file" name="url" accept="application/pdf">
+											<!--<input type="submit">-->
+										</div>
+									</div>
+
+									<!--<form  method="get" action="javascript:inactivo('<?php echo $row['codcit']; ?>')"> 
 										<button type="submit" class="btn btn-danger btn-xs">Cargar</button>
-									</form>
+									</form>-->
 									<?php  } ?>                         
 									</td>
                               		<td>
-										<div class="form-button-action">													
-											<button href="#deleteRowModal=<?php echo $row['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $row['codcit']; ?>">
+										<!--<div class="form-button-action">													
+											<button href="#deleteRowModal=<?php // echo $row['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php // echo $row['codcit']; ?>">
 												<i class="fa fa-trash"></i>						
 											</button>													
-										</div>
+										</div>-->
 									</td>
 									<?php // include('editar.php'); ?>								
 									</tr>
