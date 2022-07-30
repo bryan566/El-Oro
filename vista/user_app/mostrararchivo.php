@@ -343,11 +343,9 @@ $id=$_SESSION['id'];
 											</tfoot>-->
 											
 											
-								<tbody>
-								
+								<tbody>							
 
-
-<?php
+								<?php
 									if (isset($_SESSION['id'])) {											
 									include "../config/conex.php";
 									$sql = "SELECT cita.codcit, cita.dates, cita.hour, paciente.codpaci, 
@@ -393,6 +391,7 @@ $id=$_SESSION['id'];
 									<?php // include('editar.php'); ?>								
 									</tr>
 									<?php
+									}
 									}
 									}
 									?>
