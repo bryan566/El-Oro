@@ -365,7 +365,14 @@ $id=$_SESSION['id'];
 										<td><?php echo $row['nombre']; ?> &nbsp;<?php echo $row['apellido']; ?></td>																		
 										<td><?php echo $row ['nombrees'];?></td>
 										<td><?php echo $row ['decripcion'];?></td>
-										<!--<td><?php // echo $va ['urlpdf'];?></td>-->
+										<td>
+											<div class="col-sm-12">
+												<div class="form-group form-group-default">
+													<!--<label>Detalle</label>-->
+													<input name="datalle" type="text" class="form-control"  required placeholder="Ingrese el detalle">
+												</div>
+											</div>
+										</td>
 										
 							   
 										<td>
