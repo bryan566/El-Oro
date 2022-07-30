@@ -320,13 +320,13 @@ $id=$_SESSION['id'];
 												<tr>
 													<!--<th>#</th>-->
 													<!--<th>Fecha</th>-->
-													<th>Médicos</th>
-													<th>Especialidad</th>
-													<th>Detalle</th>
+													<th align="center">Médicos</th>
+													<th align="center">Especialidad</th>
+													<th align="center">Detalle</th>
 													<!--<th>Archivo</th>-->
 													<!--<th>Estado</th>-->
 													
-													<th style="width: 2%">Action</th>
+													<th style="width: 2%" align="center">Acción</th>
 												</tr>
 											</thead>
 											<!--<tfoot>
