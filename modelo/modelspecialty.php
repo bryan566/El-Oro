@@ -20,7 +20,7 @@ class Modelo{
     public function  insertar(Modelo $data){
         $fechaAct=  date("Y-m-d H:i:s"); 
     try {
-      $query="INSERT INTO especialidad (nombrees, descripcion,fecha_reg, fecha_mod, usu_registro, usu_mod, estado)VALUES(?,?,?,?,?,?,?)";
+      //$query="INSERT INTO especialidad (nombrees, descripcion,fecha_reg, fecha_mod, usu_registro, usu_mod, estado)VALUES(?,?,?,?,?,?,?)";
 
       $this->db->prepare($query)->execute(array($data->nombrees, $data->descripcion, $data->$fechaAct, $data->usu_registro, $data->usu_mod, $data->estado));
 
