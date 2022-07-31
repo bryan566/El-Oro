@@ -8,12 +8,12 @@ if(isset($_POST['agregar'])){
 	try{
 		//hacer uso de una declaración preparada para prevenir la inyección de sql
 		//<span>
-		echo ucfirst($_SESSION['nombre']);										
+		echo $usuario= ucfirst($_SESSION['nombre']);										
 		//</span>
 		$fechaAct=  date("Y-m-d H:i:s"); 
 
-		$stmt = $db->prepare("INSERT INTO especialidad (nombrees, descripcion, estado) VALUES (:nombrees, :descripcion, :naciona )");	
-	 	$_SESSION['message'] = ( $stmt->execute(array(':nombrees' => $_POST['nombrees'], ':descripcion' => $_POST['descripcion'], ':naciona'=>$_POST['naciona']  ) ) ) ? 'Guardado correctamente' : 'Algo salió mal. No se puede agregar';	
+		$stmt = $db->prepare("INSERT INTO especialidad (nombrees, descripcion,usu_registro, estado) VALUES (:nombrees, :descripcion, :usu_registro :naciona )");	
+	 	$_SESSION['message'] = ( $stmt->execute(array(':nombrees' => $_POST['nombrees'], ':descripcion' => $_POST['descripcion'], ':usu_registro'=>$usuario , ':naciona'=>$_POST['naciona']  ) ) ) ? 'Guardado correctamente' : 'Algo salió mal. No se puede agregar';	
 	
 	}
 	catch(PDOException $e){
