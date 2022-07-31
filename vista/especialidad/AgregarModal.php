@@ -43,6 +43,13 @@
                   </div>
                 </div>
 
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="bmd-label-floating" type ="hiden" >usuario</label>
+                    <input type="hidden" name="usuario" class="form-control" value="<?php ucfirst($_SESSION['nombre']); ?>" placeholder="Ingresa una descripción">
+                  </div>
+                </div>
               </div>
 
               <button type="submit" name="agregar" class="btn btn-primary pull-right">Agregar</button>
