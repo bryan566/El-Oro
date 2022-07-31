@@ -399,6 +399,125 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 			});
 		});
 	</script>
+	<script>
+		function activo(coddoc) {
+			var id = coddoc;
+			$.ajax({
+				type: "GET",
+				url: "../assets/ajax/editar_estado_activo_doctor.php?id=" + id,
+			}).done(function(data) {
+				window.location.href = '../folder/doctor.php';
+			})
+
+		}
+
+		// Editar estado inactivo
+		function inactivo(coddoc) {
+			var id = coddoc;
+			$.ajax({
+				type: "GET",
+				url: "../assets/ajax/editar_estado_inactivo_doctor.php?id=" + id,
+			}).done(function(data) {
+				window.location.href = '../folder/doctor.php';
+			})
+		}
+	</script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!--------------------------------script nuevo--------------------------------------------------->
+
+	<?php
+	if (isset($_POST["agregar"])) {
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "el oro";
+
+		// Creamos la conexión
+		$conn = new mysqli($servername, $username, $password, $dbname);
+
+		// Revisamos la conexión
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+		//$dnidoc=$_POST['dnidoc'];
+		$nombrees = $_POST['nombrees'];
+		$descripcion = $_POST['descripcion'];
+		$usu_registro = $_POST['usu_registro'];
+		$naciona = $_POST['naciona'];
+		
+		//$estado=$_POST['estado'];
+
+		// Realizamos la consulta para saber si coincide con uno de esos criterios
+		//$sql = "select * from doctor where cedula='$cedula' nombre='$nombre' apellido='$apellido' codespe='$codespe' ciudad='$ciudad' direccion='$direccion' or telefo='$telefono'";
+		$sql = "select * from doctor where cedula='$cedula' or telefono='$telefono'";
+		$result = mysqli_query($conn, $sql);
+	?>
+
+
+		<?php
+		// Validamos si hay resultados
+		if (mysqli_num_rows($result) > 0) {
+			// Si es mayor a cero imprimimos que ya existe el usuario
+
+			if ($result) {
+		?>
+
+				<script type="text/javascript">
+					Swal.fire({
+						icon: 'error',
+						title: 'Oops...',
+						text: 'Ya existe el registro a agregar!'
+
+					})
+				</script>
+
+				<?php
+			}
+		} else {
+			// Si no hay resultados, ingresamos el registro a la base de datos
+			$sql2 = "INSERT INTO especialidad(nombrees, descripcion, usu_registro, usu_mod, estado)VALUES ('$nombrees','$descripcion','$usu_registro','$usu_mod','$estado')";
+
+
+			if (mysqli_query($conn, $sql2)) {
+
+				if ($sql2) {
+				?>
+
+					<script type="text/javascript">
+						Swal.fire({
+							position: 'top-end',
+							icon: 'success',
+							title: 'Agregado correctamente',
+							showConfirmButton: false,
+							timer: 1500
+						}).then(function() {
+							window.location = "../folder/doctor.php";
+						});
+					</script>
+
+				<?php
+				} else {
+				?>
+					<script type="text/javascript">
+						Swal.fire({
+							icon: 'error',
+							title: 'Oops...',
+							text: 'No se pudo guardar!'
+
+						})
+					</script>
+	<?php
+
+				}
+			} else {
+
+				echo "Error: " . $sql2 . "" . mysqli_error($conn);
+			}
+		}
+		// Cerramos la conexión
+		$conn->close();
+	}
+	?>
 </body>
 
 </html>
