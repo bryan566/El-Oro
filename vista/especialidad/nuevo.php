@@ -10,10 +10,10 @@ if(isset($_POST['agregar'])){
 		//<span>
 		echo $usuario= ucfirst($_SESSION['nombre']);										
 		//</span>
-		$fechaAct=  date("Y-m-d H:i:s"); 
+		echo $fechaAct=  date("Y-m-d H:i:s"); 
 
 		$stmt = $db->prepare("INSERT INTO especialidad (nombrees, descripcion,usu_registro, estado) VALUES (:nombrees, :descripcion, :usu_registro :naciona )");	
-	 	$_SESSION['message'] = ( $stmt->execute(array(':nombrees' => $_POST['nombrees'], ':descripcion' => $_POST['descripcion'], ':usu_registro' => ucfirst($_SESSION['nombre']) , ':naciona'=>$_POST['naciona']  ) ) ) ? 'Guardado correctamente' : 'Algo salió mal. No se puede agregar';	
+	 	$_SESSION['message'] = ( $stmt->execute(array(':nombrees' => $_POST['nombrees'], ':descripcion' => $_POST['descripcion'], ':usu_registro' => $_POST['nombre'], ':naciona'=>$_POST['naciona']  ) ) ) ? 'Guardado correctamente' : 'Algo salió mal. No se puede agregar';	
 	
 	}
 	catch(PDOException $e){
