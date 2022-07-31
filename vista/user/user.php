@@ -79,6 +79,8 @@ $id=$_SESSION['id'];
 								</a>								
 							</div>
 					</div>		
+					<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
 						<li class="nav-item" >
 							<a data-toggle="collapse" href="#forms" class="text-white">
 							<i class="fas fa-user-md"></i> <!--<i class="fas fa-layer-group"></i> -->
