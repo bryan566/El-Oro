@@ -103,8 +103,9 @@ $id=$_SESSION['id'];
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">								
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="../../cerrarSesion.php" type="button" class="btn btn-outline-dark">Cerrar sesión</a>
-							</a>
+							
 						</li>
+						</a>
 										
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
