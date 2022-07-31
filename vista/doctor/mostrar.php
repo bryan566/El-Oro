@@ -656,10 +656,10 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 
 																<td>
 																<!--<div class="form-button-action">
-																	<button href="#editRowModal=<?php echo $va['coddoc']; ?>" class="btn btn-link btn-primary btn-lg" data-toggle="modal" title="" data-original-title="Edit Task" data-target="#editRowModal<?php echo $va['coddoc']; ?>">
+																	<button href="#editRowModal=<?php // echo $va['coddoc']; ?>" class="btn btn-link btn-primary btn-lg" data-toggle="modal" title="" data-original-title="Edit Task" data-target="#editRowModal<?php // echo $va['coddoc']; ?>">
 																		<i class="fa fa-edit"></i>
 																	</button>
-																	<button href="#deleteRowModal=<?php echo $va['coddoc']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $va['coddoc']; ?>">
+																	<button href="#deleteRowModal=<?php // echo $va['coddoc']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php // echo $va['coddoc']; ?>">
 																		<i class="fa fa-times"></i>
 																	</button>
 																	<?php // include('editar.php'); ?>
@@ -673,9 +673,9 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 
 																	<div class="form-button-action">
 
-																		<a href="#editRowModal_<?php // echo $va["coddoc"]; ?>" title="" data-backdrop="false" class="btn btn-link btn-primary btn-lg" data-toggle="modal"><i class="fa fa-edit"></i></a>
+																		<a href="#editRowModal_<?php  echo $va["coddoc"]; ?>" title="" data-backdrop="false" class="btn btn-link btn-primary btn-lg" data-toggle="modal"><i class="fa fa-edit"></i></a>
 
-																		<button href="#deleteRowModal=<?php // echo $va['coddoc']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php // echo $va['coddoc']; ?>">
+																		<button href="#deleteRowModal=<?php  echo $va['coddoc']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php  echo $va['coddoc']; ?>">
 																			<i class="fa fa-times"></i>
 
 																		</button>
