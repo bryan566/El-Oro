@@ -24,7 +24,7 @@ class specialtycontroller{
                 $fechaAct=  date("Y-m-d H:i:s"); 
                 $alm->nombrees=$_POST['nombrees'];
                 $alm->descripcion=$_POST['descripcion'];
-                $alm->fecha_reg=$_POST[$fechaAct]; 
+                $alm->usu_registro=$_POST['usu_registro']; 
                 $alm->naciona=$_POST['naciona'];
                 
                 
