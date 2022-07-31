@@ -46,27 +46,7 @@ $id=$_SESSION['id'];
 
 	<div class="wrapper">
 		<div class="main-header">
-			<!-- Logo Header 
-			<div class="logo-header" data-background-color="blue">
-				
-				<a href="user.php" class="logo">
-					<img src="../../assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
-				</a>
-				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon">
-						<i class="icon-menu"></i>
-					</span>
-				</button>
-				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
-				<div class="nav-toggle">
-					<button class="btn btn-toggle toggle-sidebar">
-						<i class="icon-menu"></i>
-					</button>
-				</div>
-			</div>-->
-			<!-- End Logo Header -->
-
-			<!-- Navbar Header -->
+			
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
 			<div class="container-fluid">
 					<div class="user">							
@@ -78,9 +58,7 @@ $id=$_SESSION['id'];
 									</span>
 								</a>								
 							</div>
-					</div>		
-					<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-					<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					</div>						
 						<li class="nav-item" >
 							<a data-toggle="collapse" href="#forms" class="text-white">
 							<i class="fas fa-user-md"></i> <!--<i class="fas fa-layer-group"></i> -->
