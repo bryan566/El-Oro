@@ -676,7 +676,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 																		<a href="#editRowModal_<?php  echo $va["coddoc"]; ?>" title="" data-backdrop="false" class="btn btn-link btn-primary btn-lg" data-toggle="modal"><i class="fa fa-edit"></i></a>
 
 																		<button href="#deleteRowModal=<?php  echo $va['coddoc']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php  echo $va['coddoc']; ?>">
-																			<i class="fa fa-times"></i>
+																			<!--<i class="fa fa-times"></i>-->
 
 																		</button>
 
