@@ -550,8 +550,8 @@ if ($conn->connect_error) {
    } 
 $coddoc=$_POST['coddoc'];
 $codpaci=$_POST['codpaci'];
-$codespe=$_POST['decripcion'];
-$hour=$_POST['urlpdf'];
+$decripcion=$_POST['decripcion'];
+$urlpdf=$_POST['urlpdf'];
 
 
 
@@ -590,7 +590,8 @@ Swal.fire({
  else
  {
 // Si no hay resultados, ingresamos el registro a la base de datos
-$sql2 = "INSERT INTO cita (dates,hour,codpaci,coddoc,codespe,estado)VALUES ('$dates','$hour','$codpaci','$coddoc','$codespe','0')";
+//$sql2 = "INSERT INTO cita (dates,hour,codpaci,coddoc,codespe,estado)VALUES ('$dates','$hour','$codpaci','$coddoc','$codespe','0')";
+$sql2 = "INSERT INTO examen (coddoc,codpaci,descripcion,urlpdf)VALUES ('$coddoc','$codpaci','$decripcion','$urlpdf')";
 
 
 if (mysqli_query($conn, $sql2)) {
