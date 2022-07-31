@@ -81,7 +81,7 @@ $id=$_SESSION['id'];
 					</div>		
 						<li class="nav-item" >
 							<a data-toggle="collapse" href="#forms" class="text-white">
-							<i class="fas fa-layer-group"></i> <!-- -->
+							<i class="fas fa-user-md"></i> <!--<i class="fas fa-layer-group"></i> -->
 								<p>Citas</p>
 								<!--<span class="caret"></span>-->
 							</a> 
