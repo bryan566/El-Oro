@@ -47,7 +47,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label class="bmd-label-floating" type ="hiden" >usuario</label>
-                    <input type="text" name="usu_registro" class="form-control" value="<?php ucfirst($_SESSION['nombre']); ?>" placeholder="Ingresa una descripción">
+                    <input type="text" name="usu_registro" class="form-control" value="<?php echo ucfirst($_SESSION['nombre']); ?>" placeholder="Ingresa una descripción">
                   </div>
                 </div>
               </div>
