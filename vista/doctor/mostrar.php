@@ -655,16 +655,32 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 																</td>
 
 																<td>
-																	<div class="form-button-action">
+																<div class="form-button-action">
+																	<button href="#editRowModal=<?php echo $row['coddoc']; ?>" class="btn btn-link btn-primary btn-lg" data-toggle="modal" title="" data-original-title="Edit Task" data-target="#editRowModal<?php echo $row['coddoc']; ?>">
+																		<i class="fa fa-edit"></i>
+																	</button>
+																	<button href="#deleteRowModal=<?php echo $row['coddoc']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $row['coddoc']; ?>">
+																		<i class="fa fa-times"></i>
+																	</button>
+																	<?php include('editar.php'); ?>
+																</div>
 
-																		<a href="#editRowModal_<?php echo $va["coddoc"]; ?>" title="Editar" data-backdrop="false" class="btn btn-link btn-primary btn-lg" data-toggle="modal"><i class="fa fa-edit"></i></a>
 
-																		<button href="#deleteRowModal=<?php echo $va['coddoc']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php echo $va['coddoc']; ?>">
+
+
+
+
+
+																	<!--<div class="form-button-action">
+
+																		<a href="#editRowModal_<?php // echo $va["coddoc"]; ?>" title="" data-backdrop="false" class="btn btn-link btn-primary btn-lg" data-toggle="modal"><i class="fa fa-edit"></i></a>
+
+																		<button href="#deleteRowModal=<?php // echo $va['coddoc']; ?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal" title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php // echo $va['coddoc']; ?>">
 																			<i class="fa fa-times"></i>
 
 																		</button>
 
-																	</div>
+																	</div>-->
 																</td>
 
 																<?php include('editar.php'); ?>
@@ -678,7 +694,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 												</tbody>
 
 
-												<?php include('AgregarModal.php'); ?>
+												<?php // include('AgregarModal.php'); ?>
 
 
 											</table>
@@ -700,6 +716,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 
 	</div>
 	<!--   Core JS Files   -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="../assets/js/functions3.js"></script>
 	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
