@@ -28,7 +28,8 @@ if ($_FILES["archivo"]) {
 
         if ($resultado) {
             //echo "<script>alert('se ha subido el examen');window.location='vista/user_app/mostrar.php'</script>";
-            echo "<script>alert('se ha subido el examen');window.location='vista/mostrar.php'</script>";
+            echo "<script>alert('se ha subido el examen');</script>";
+            header("Location:/vista/user_app/mostrararchivo.php");
         } else {
             echo "error al subir el archivo";
         }
