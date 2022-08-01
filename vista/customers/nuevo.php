@@ -8,12 +8,12 @@ if(isset($_POST['agregar'])){
 	try{
 		//hacer uso de una declaración preparada para prevenir la inyección de sql
 		//$stmt = $db->prepare("INSERT INTO customers (dnipa, nombrep,apellidop,seguro,tele,sexo,email,clave ,cargo,estado) 
-		$stmt = $db->prepare("INSERT INTO paciente (nombrep,apellidop,seguro,telefono,sexo,email,clave ,cargo,archivo,estado) 
-		VALUES (:nombrep, :apellidop, :seguro, :telefono,:sexo,:email,:clave,:archivo,:cargo,:estado)");
+		$stmt = $db->prepare("INSERT INTO paciente (cedula,nombrep,apellidop,sexo,telefono,fechanaci,correo,direccion,ciudad,usuario, clave ,cargo,estado) 
+		VALUES (:cedula,:nombrep, :apellidop, :sexo, :telefono, :fechanaci, :correo, :direccion, :ciudad, :usuario, :clave, :cargo, :estado)");
 
 		//instrucción if-else en la ejecución de nuestra declaración preparada
-		$_SESSION['message'] = ( $stmt->execute(array(':nombrep' => $_POST['nombrep'] , ':apellidop' => $_POST['apellidop'], 
-		':seguro' => $_POST['seguro'], ':telefono' => $_POST['telefono'], ':sexo' => $_POST['sexo'], ':email' => $_POST['email'],':archivo' => $_POST['archivo'], ':clave' => MD5($_POST['clave']), 
+		$_SESSION['message'] = ( $stmt->execute(array(':cedula' => $_POST['cedula'] ,':nombrep' => $_POST['nombrep'] , ':apellidop' => $_POST['apellidop'], 
+		':sexo' => $_POST['sexo'], ':telefono' => $_POST['telefono'], ':fechanaci' => $_POST['fechanaci'], ':correo' => $_POST['correo'], ':direccion' => $_POST['direccion'],':ciudad' => $_POST['ciudad'], ':usuario' => $_POST['usuario'], ':clave' => MD5($_POST['clave']), 
 		':cargo' => $_POST['cargo'], ':estado' => $_POST['estado'])) ) ? 'Paciente guardado correctamente' : 'Algo salió mal. No se puede agregar miembro';	
 	
 	}
