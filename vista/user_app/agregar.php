@@ -17,7 +17,7 @@
 
 						<!--<form action="/vista/user_app/insertar.php" method="POST" autocomplete="off" class="form-register" enctype="multipart/form-data">-->
 
-						<form action="/vista/user_app/insertar.php" class="form-register" method="POST" enctype="multipart/form-data">
+						<form action="insertar.php" class="form-register" method="POST" enctype="multipart/form-data">
         
         <h1 class="form__title">Registro de Exámenes del Paciente</h1>
         <div class="container--flex">
