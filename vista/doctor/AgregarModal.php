@@ -16,12 +16,7 @@
 
 						<form method="POST" autocomplete="off" enctype="multipart/form-data">
 							<div class="row">
-								<!--<div class="col-sm-12">
-							<div class="form-group form-group-default">
-								<label>DNI</label>
-								<input name="dnidoc" required="" type="text" class="form-control" maxlength="8" placeholder="Ingrese dni" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
-							</div>
-						</div>-->
+								
 								<div class="col-sm-12">
 									<div class="form-group form-group-default">
 										<label>Cedula</label>
@@ -61,12 +56,6 @@
 									</div>
 								</div>
 
-								<!--<div class="col-md-6">
-							<div class="form-group form-group-default">
-								<label>Teléfono</label>
-								<input name="telefo" required="" type="text" class="form-control" maxlength="9" placeholder="Ingrese teléfono" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
-							</div>
-						</div>-->
 								<div class="col-md-6">
 									<div class="form-group form-group-default">
 										<label>Teléfono</label>
@@ -87,21 +76,6 @@
 										<input name="correo" required="" type="text" class="form-control" placeholder="Ingresa tu correo">
 									</div>
 								</div>
-
-
-								<!--<div class="col-md-6">
-									<div class="form-group form-group-default">
-										<label>Ciudad</label>
-										<select class="form-control" name="naciona">
-											<option value="Peruana(o)">Quito(o)</option>
-											<option value="Venezolana(o)">Guayaquil(o)</option>
-											<option value="Argentina(o)">Cuenca(o)</option>
-											<option value="Ecuatoriana(o)">Loja(o)</option>
-											<option value="Uruguaya(o)">Machala(o)</option>
-
-										</select>
-									</div>
-								</div>-->
 
 								<div class="col-md-6">
 									<div class="form-group form-group-default">
