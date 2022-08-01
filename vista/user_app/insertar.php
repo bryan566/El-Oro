@@ -5,7 +5,9 @@ include_once('../config/dbconect.php');
 $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
 $archivo = $_POST["archivo"];
+$descripcion = $_POST["descripcion"];
 $fecha = $_POST["fecha"];
+
 
 
 
