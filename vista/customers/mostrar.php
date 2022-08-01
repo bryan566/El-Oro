@@ -116,7 +116,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 								</ul>
 							</div>
 						</li>-->
-					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<!--<a class="nav-item nav-link" href=""></a>-->  <!-- Espaciado -->
 					<!-- Submenú Citas -->
 					<li class="nav-item">
 						<a data-toggle="collapse" href="#base" class="text-white">
