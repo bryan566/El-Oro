@@ -26,6 +26,7 @@ class specialtycontroller{
                 $alm->descripcion=$_POST['descripcion'];
                 $alm->usu_registro=$_POST['usu_registro']; 
                 $alm->naciona=$_POST['naciona'];
+                $alm->estado=$_POST['estado'];
                 
                 
 
