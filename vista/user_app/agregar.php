@@ -58,8 +58,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<input type="file" name="archivo" class="btn btn-success" data-dismiss="modal"><span class="glyphicon glyphicon-remove" require></span></input>
-					<input type="submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon"></span> Enviar</input>
+					<input type="file" name="archivo" class="btn btn-success" required>
+					<input type="submit" class="btn btn-primary" class="glyphicon">
 					
 				</form>
 
