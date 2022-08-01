@@ -27,15 +27,14 @@ if ($_FILES["archivo"]) {
         $resultado = mysqli_query($conexion, $insertar);
 
         if ($resultado) {
-            //echo "<script>alert('se ha subido el examen');window.location='vista/user_app/mostrar.php'</script>";
-            echo "<script>alert('se ha subido el examen');</script>";
-            header("Location:/vista/user_app/mostrararchivo.php");
+            echo "<script>alert('se ha subido el examen');window.location='../vista/user_app/mostrar.php'</script>";            
+           
         } else {
             echo "error al subir el archivo";
         }
     }
 }
 
-header('location: ../../folder/examen.php');
+//header('location: ../../folder/examen.php');
 
 ?>
