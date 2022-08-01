@@ -59,7 +59,7 @@
 
 				<div class="modal-footer">
 					<input type="file" name="archivo" class="btn btn-success" required>
-					<input type="submit" class="btn btn-primary" class="glyphicon">
+					<input type="submit" class="btn btn-primary" class="glyphicon" >
 					
 				</form>
 
