@@ -94,7 +94,7 @@ $id=$_SESSION['id'];
 								<ul class="nav nav-collapse">
 									<li>
 									<a href="../user_app/mostrar.php">
-											<span class="sub-item text-white" >Mostrar1</span>
+											<span class="sub-item text-white" >Mostrar</span>
 										</a>
 									</li>
 								</ul>
