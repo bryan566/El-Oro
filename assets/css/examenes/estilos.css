@@ -10,7 +10,7 @@ body{
     align-items: center;
     min-height: 100vh;
 }
-.form-register{
+.card-body .form-register{
     width: 95%;
     max-width: 500px;
     background: white;
