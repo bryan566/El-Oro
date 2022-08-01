@@ -7,7 +7,7 @@
 			<div class="modal-header">
 
 				<center>
-					<h4 class="modal-title" id="myModalLabel">Registro de Pacientes</h4>
+					<h4 class="modal-title" id="myModalLabel">Registro de Examenes del Paciente</h4>
 				</center>
 			</div>
 			<div class="modal-body">
