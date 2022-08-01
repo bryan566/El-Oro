@@ -13,9 +13,8 @@ $apellido = $_POST["apellido"];
 $descripcion = $_POST["descripcion"];
 $fecha = $_POST["fecha"];
 
-$_SESSION['codpaci'];
-$_SESSION['nombrep'];
-
+echo "$codpaci". $_SESSION["codpaci"];  
+echo "$nombre". $_SESSION["nombre"];  
 
 if ($_FILES["archivo"]) {
     $nombre_base = basename($_FILES["archivo"]["name"]);
@@ -24,7 +23,7 @@ if ($_FILES["archivo"]) {
     $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
 
     if ($subirarchivo) {
-        $insertar = "INSERT INTO examen (nombre,apellido,descripcion,codpaci,nombrep,fecha,archivo) VALUES ('$nombre', '$apellido', '$descripcion','$_SESSION['codpaci']', '$_SESSION['nombrep']', '$fecha', '$ruta')";
+        $insertar = "INSERT INTO examen (nombre,apellido,descripcion,codpaci,nombrep,fecha,archivo) VALUES ('$nombre', '$apellido', '$descripcion','$codpaci', '$nombre', '$fecha', '$ruta')";
         $resultado = mysqli_query($conexion, $insertar);
 
         if ($resultado) {
