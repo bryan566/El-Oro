@@ -42,7 +42,7 @@
 								<div class="form-group form-group-default">
 									<label>Estado</label>
 									<select class="form-control" name="estado">
-										<option value=""><?php echo $va['estado']; ?></option>
+										
 										<option value="Activo">Activo</option>
 										<option value="Activo">Inactivo</option>
 									</select>
