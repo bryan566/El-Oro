@@ -366,7 +366,7 @@ $id=$_SESSION['id'];
 													if (mysqli_num_rows($query) > 0) {
 														while ($row = mysqli_fetch_assoc($query)) {
 													?>
-													<?php  echo ucfirst($_SESSION['codpaci']); ?><br>
+													
 													<!--<td><?php // echo $row['codcit']; ?></td>-->
 													<td><?php echo $row['cedula']; ?></td>
 													<td><?php echo $row['nombrep']; ?> &nbsp;<?php echo $row['apellidop']; ?></td>
@@ -408,7 +408,7 @@ $id=$_SESSION['id'];
 												header('location:mostrar.php');
 											}
 											?>
-					
+											<?php  echo ucfirst($_SESSION['codpaci']); ?><br>
 										</tbody>
 																							
 											
