@@ -435,14 +435,13 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 		$nombrees = $_POST['nombrees'];
 		$descripcion = $_POST['descripcion'];
 		$usu_registro = $_POST['usu_registro'];
-		$naciona = $_POST['naciona'];
 		$estado = $_POST['estado'];
 
 		//$estado=$_POST['estado'];
 
 		// Realizamos la consulta para saber si coincide con uno de esos criterios
 		//$sql = "select * from doctor where cedula='$cedula' nombre='$nombre' apellido='$apellido' codespe='$codespe' ciudad='$ciudad' direccion='$direccion' or telefo='$telefono'";
-		$sql = "select * from doctor where cedula='$cedula' or telefono='$telefono'";
+		$sql = "select * from doctor where nombrees='$nombrees' or descripcion='$descripcion'";
 		$result = mysqli_query($conn, $sql);
 	?>
 
