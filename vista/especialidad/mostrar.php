@@ -281,13 +281,13 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 															<td><?php echo $row['usu_mod']; ?></td>
 
 															<td>
-																<?php if ($va['estado'] == 1) { ?>
-																	<form method="get" action="javascript:activo('<?php echo $va['coddoc']; ?>')">
+																<?php if ($row['estado'] == 1) { ?>
+																	<form method="get" action="javascript:activo('<?php echo $row['codespe']; ?>')">
 																		<button type="submit" class="btn btn-success btn-xs">Activo</button>
 																	</form>
 																<?php  } else { ?>
 
-																	<form method="get" action="javascript:inactivo('<?php echo $va['coddoc']; ?>')">
+																	<form method="get" action="javascript:inactivo('<?php echo $row['codespe']; ?>')">
 																		<button type="submit" class="btn btn-danger btn-xs">Inactivo</button>
 																	</form>
 																<?php  } ?>
