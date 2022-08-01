@@ -291,7 +291,7 @@ $id=$_SESSION['id'];
 			<div class="content">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Exámenes</h4>						
+						<h4 class="page-title">Subir Exámenes</h4>						
 					</div>
 					<div class="row">
 						
