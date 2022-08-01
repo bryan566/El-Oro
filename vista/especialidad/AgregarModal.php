@@ -37,8 +37,8 @@
                   <div class="form-group form-group-default">
                     <label>Estado</label>
                     <select class="form-control" name="estado">
-                      <option value="1">Activo</option>
-                      <option value="0">Inactivo</option>
+                      <option value="activo">Activo</option>
+                      <option value="inactivo">Inactivo</option>
                     </select>
                   </div>
                 </div>
