@@ -240,10 +240,10 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 													<!--<th>#</th>-->
 													<th>Especialidad</th>
 													<th>Descripción</th>
-													<th>F.Registro</th>
-													<th>F.Modificación</th>
-													<th>U.Registro</th>
-													<th>U.Modificación</th>
+													<th>Fecha Registro</th>
+													<th>Fecha Modificación</th>
+													<th>Usuario Registro</th>
+													<th>Usuario Modificación</th>
 													<th>Estado</th>
 
 													<th style="width: 10%">Action</th>
@@ -279,19 +279,9 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 															<td><?php echo $row['fecha_mod']; ?></td>
 															<td><?php echo $row['usu_registro']; ?></td>
 															<td><?php echo $row['usu_mod']; ?></td>
+															<td><?php echo $row['estado']; ?></td>
 
-															<td>
-																<?php if ($row['estado'] == 1) { ?>
-																	<form method="get" action="javascript:activo('<?php echo $row['codespe']; ?>')">
-																		<button type="submit" class="btn btn-success btn-xs">Activo</button>
-																	</form>
-																<?php  } else { ?>
-
-																	<form method="get" action="javascript:inactivo('<?php echo $row['codespe']; ?>')">
-																		<button type="submit" class="btn btn-danger btn-xs">Inactivo</button>
-																	</form>
-																<?php  } ?>
-															</td>
+		
 
 															<td>
 																<div class="form-button-action">
@@ -446,6 +436,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 		$descripcion = $_POST['descripcion'];
 		$usu_registro = $_POST['usu_registro'];
 		$naciona = $_POST['naciona'];
+		$estado = $_POST['estado'];
 
 		//$estado=$_POST['estado'];
 
