@@ -365,13 +365,7 @@ $id=$_SESSION['id'];
 										<td><?php echo $row['nombre']; ?> &nbsp;<?php echo $row['apellido']; ?></td>																		
 										<td><?php echo $row ['nombrees'];?></td>
 										<!--<td><?php // echo $row ['decripcion'];?></td>-->
-										<td>
-											<div class="col-sm-12">
-												<div class="form-group form-group-default">													
-													<input name="datalle" type="text" class="form-control"  required placeholder="Ingrese el detalle">
-												</div>
-											</div>
-										</td>
+										
 										
 							   
 										<td>
@@ -382,14 +376,6 @@ $id=$_SESSION['id'];
 									</form>-->
 									<?php  }   else {?> 
 
-
-									<div class="col-md-12">
-										<div class="form-group">
-											<label class="bmd-label-floating">Examinar</label>
-											<input type="file" name="url" accept="application/pdf">
-											<!--<input type="submit">-->
-										</div>
-									</div>
 									
 
 									<!--<form  method="get" action="javascript:inactivo('<?php // echo $row['codcit']; ?>')"> 
