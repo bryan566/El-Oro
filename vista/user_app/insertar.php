@@ -4,6 +4,7 @@ include_once('../config/dbconect.php');
 
 $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
+$archivo = $_POST["archivo"];
 $fecha = $_POST["fecha"];
 
 
@@ -15,7 +16,7 @@ if ($_FILES["archivo"]) {
     $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
 
     if ($subirarchivo) {
-        $insertar = "INSERT INTO examenes(nombre,apellido,fecha,archivo) VALUES ('$nombre', '$apellido', '$fecha', '$ruta')";
+        $insertar = "INSERT INTO examenes(nombre,apellido,descripcion,fecha,archivo) VALUES ('$nombre', '$apellido', '$descripcion', '$fecha', '$ruta')";
         $resultado = mysqli_query($conexion, $insertar);
 
         if ($resultado) {
