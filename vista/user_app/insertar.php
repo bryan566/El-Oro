@@ -12,8 +12,8 @@ $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
 $descripcion = $_POST["descripcion"];
 $fecha = $_POST["fecha"];
-
-echo "$codpaci". $_SESSION["codpaci"];  
+echo $codpaci=$_SESSION['id']; 
+//echo "$codpaci". $_SESSION["codpaci"];  
 echo "$nombre". $_SESSION["nombre"];  
 
 if ($_FILES["archivo"]) {
