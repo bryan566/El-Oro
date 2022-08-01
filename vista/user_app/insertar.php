@@ -23,7 +23,7 @@ if ($_FILES["archivo"]) {
     $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
 
     if ($subirarchivo) {
-        $insertar = "INSERT INTO examen (nombre,apellido,descripcion,codpaci,nombrep,fecha,archivo) VALUES ('$nombrem', '$apellido', '$descripcion','$codpaci', '$nombrep', '$fecha', '$ruta')";
+        $insertar = "INSERT INTO examen (nombrem,apellido,descripcion,codpaci,nombrep,fecha,archivo) VALUES ('$nombrem', '$apellido', '$descripcion','$codpaci', '$nombrep', '$fecha', '$ruta')";
         $resultado = mysqli_query($conexion, $insertar);
 
         if ($resultado) {
