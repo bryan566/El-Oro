@@ -14,7 +14,7 @@
 				<div class="container-fluid">
 
 					<div class="card-body">
-					<?php  echo ucfirst($_SESSION['nombre']); ?><br>
+					<?php // echo ucfirst($_SESSION['nombre']); ?>
 						<form action="insertar.php" class="" method="POST" enctype="multipart/form-data">
 							<div class="row">
 								<div class="col-sm-12">
