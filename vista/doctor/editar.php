@@ -32,7 +32,7 @@
 								<div class="form-group form-group-default">
 									<label>Nombre</label>
 									<input type="text" class="form-control" name="nombre" value="<?php echo $va['nombre']; ?>">
-								
+
 								</div>
 							</div>
 
@@ -57,7 +57,6 @@
 							<div class="col-md-6">
 								<div class="form-group form-group-default">
 									<label>Teléfono</label>
-
 									<input type="text" class="form-control" maxlength="10" name="telefono" value="<?php echo $va['telefono']; ?>">
 								</div>
 							</div>
@@ -65,7 +64,6 @@
 							<div class="col-md-6">
 								<div class="form-group form-group-default">
 									<label>Fecha Nacimiento</label>
-
 									<input type="date" class="form-control" name="fechanaci" value="<?php echo $va['fechanaci']; ?>">
 								</div>
 							</div>
@@ -73,7 +71,6 @@
 							<div class="col-md-6">
 								<div class="form-group form-group-default">
 									<label>Correo</label>
-
 									<input type="text" class="form-control" name="correo" value="<?php echo $va['correo']; ?>">
 								</div>
 							</div>
@@ -85,18 +82,6 @@
 								</div>
 							</div>
 
-							<!--<div class="col-md-6">
-								<div class="form-group form-group-default">
-									<label>Nacionalidad</label>
-									<select class="form-control" name="naciona" value="<?php echo $va['naciona']; ?>">
-										<option value="Peruana(o)">Peruana(o)</option>
-										<option value="Venezolana(o)">Venezolana(o)</option>
-										<option value="Argentina(o)">Argentina(o)</option>
-										<option value="Ecuatoriana(o)">Ecuatoriana(o)</option>
-										<option value="Uruguaya(o)">Uruguaya(o)</option>
-									</select>
-								</div>
-							</div>-->
 
 							<div class="col-md-6">
 								<div class="form-group form-group-default">
