@@ -129,8 +129,9 @@
 								</ul>
 							</div>
 						</li><!---->
-						<a  class="nav-item nav-link" href=""></a> <!-- Espaciado -->
-						<!-- Submenú Usuarios-->
+						<!-- Submenú Usuarios
+						<a  class="nav-item nav-link" href=""></a> 
+						
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#user" class="text-white">
 								<i class="fas fa-user"></i>
@@ -146,7 +147,7 @@
 									
 								</ul>
 							</div>
-						</li>
+						</li>-->
 												
 						<!-- Submenú Usuarios
 						<li class="nav-item">
