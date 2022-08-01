@@ -87,7 +87,7 @@ $id=$_SESSION['id'];
 									<li>
 											<a href="../user_app/mostrararchivo.php">
 											<!--<a href="../user_app/mostrar.php">-->
-											<span class="sub-item text-white">Mostraaaaaaaaaaaaar</span>
+											<span class="sub-item text-white">Mostrar</span>
 										</a>
 									</li>
 									
