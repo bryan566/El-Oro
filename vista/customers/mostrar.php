@@ -300,6 +300,8 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 																<td><?php echo $row['sexo']; ?></td>
 																<td><?php echo $row['correo']; ?></td>
 																<td><?php echo $row['telefono']; ?></td>
+																<td><?php echo $row['direccion']; ?></td>
+																<td><?php echo $row['ciudad']; ?></td>
 
 																<td>
 																	<?php if ($row['estado'] == 1) { ?>
