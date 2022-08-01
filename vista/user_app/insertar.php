@@ -19,7 +19,7 @@ if ($_FILES["archivo"]) {
         $resultado = mysqli_query($conexion, $insertar);
 
         if ($resultado) {
-            echo "<script>alert('se ha subido el examen');window.location='/'</script>";
+            echo "<script>alert('se ha subido el examen');window.location='agregar.php'</script>";
         } else {
             echo "error al subir el archivo";
         }
