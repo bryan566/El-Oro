@@ -32,6 +32,7 @@ if (isset($_POST['login'])) {
 
           $_SESSION['id'] = $data['id'];
           $_SESSION['nombre'] = $data['nombre'];
+          $_SESSION['codpaci'] = $data['codpaci'];
           $_SESSION['usuario'] = $data['usuario'];
           $_SESSION['email'] = $data['email'];
           $_SESSION['clave'] = $data['clave'];
