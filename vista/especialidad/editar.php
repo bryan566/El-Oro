@@ -37,10 +37,20 @@
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label for="estado">Estado</label>
 
-							<select name="estado" id="estado" style="width:400px" class="custom-select" Required>
+							<div class="col-sm-12">
+								<div class="form-group form-group-default">
+									<label>Estado</label>
+									<select class="form-control" name="estado">
+										<option value=""><?php echo $va['estado']; ?></option>
+										<option value="Activo">Activo</option>
+										<option value="Activo">Inactivo</option>
+									</select>
+								</div>
+							</div>
+
+
+							<!--<select name="estado" id="estado" style="width:400px" class="custom-select" Required>
 								<option value="<?php echo $usuarios->gen_per ?>"> <?php
 																					if ($row['estado'] == 1) {
 																						echo "Activo";
@@ -51,9 +61,8 @@
 																						echo '<option value ="1">Activo</option>';
 																					}
 																					?> </option>
-							</select>
-						</div>
-
+							</select>-->
+						
 				</div>
 				<div class="modal-footer no-bd">
 					<button type="submit" name="editar" class="btn btn-primary">Edit
