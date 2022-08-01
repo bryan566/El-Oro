@@ -365,7 +365,7 @@ $id=$_SESSION['id'];
 										
 										
 							   
-										<td>
+										<!--<td>-->
 									<?php    if($row['estado']==1)  { ?> 
 									<!--<form  method="get" action="javascript:activo('<?php // echo $row['codcit']; ?>')">
 										
@@ -379,8 +379,8 @@ $id=$_SESSION['id'];
 										<button type="submit" class="btn btn-danger btn-xs">Cargar</button>
 									</form>-->
 									<?php  } ?>                         
-									</td>
-                              		<td>
+									<!--</td>-->
+                              		<!--<td>-->
 									  	
 									  <!--<button class="btn btn-primary" type="submit">Guardar</button>
 										x<div class="form-button-action">		glyphicon .glyphicon-download											
@@ -388,7 +388,7 @@ $id=$_SESSION['id'];
 												<i class="fa fa-trash"></i>						
 											</button>													
 										</div>-->
-									</td>
+									<!--</td>-->
 									<?php // include('editar.php'); ?>								
 									</tr>
 									<?php
