@@ -103,7 +103,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 							</ul>
 						</div>
 					</li>
-					<a class="nav-item nav-link" href=""></a> <!-- Espaciado -->
+					<!--<a class="nav-item nav-link" href=""></a>--> <!-- Espaciado -->
 					<!-- Submenú horarios
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#calendar" class="text-white">
