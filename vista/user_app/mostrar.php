@@ -78,6 +78,7 @@ $id=$_SESSION['id'];
 								<a class="text-white" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 									<span>
 									<?php  echo ucfirst($_SESSION['nombre']); ?><br>
+									<?php  echo ucfirst($_SESSION['codpaci']); ?><br>
 										<span class="user-level">Paciente</span>									
 									</span>
 								</a>								
