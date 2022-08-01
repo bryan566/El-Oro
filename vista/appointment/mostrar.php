@@ -161,7 +161,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 						</div>
 					</li>
 
-					<li class="nav-item">
+					<!--<li class="nav-item">
 						<a data-toggle="collapse" href="#sidebarLayouts" class="text-white">
 							<i class="fas fa-male"></i>
 							<p>Examenes</p>
@@ -176,7 +176,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 
 							</ul>
 						</div>
-					</li>
+					</li>-->
 
 
 
