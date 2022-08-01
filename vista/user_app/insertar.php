@@ -1,6 +1,12 @@
 <?php
 session_start();
-include_once('../config/dbconect.php');
+$conexion = mysqli_connect("localhost", "root", "", "el oro");
+
+//include_once('../config/dbconect.php');
+//include_once('../vista/config/dbconect.php');
+
+//$database = new Connection();
+//$db = $database->open();
 
 $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
