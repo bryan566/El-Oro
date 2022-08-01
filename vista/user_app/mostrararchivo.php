@@ -319,12 +319,9 @@ $id=$_SESSION['id'];
 											<thead>
 												<tr>
 													<!--<th>#</th>-->
-													<!--<th>Fecha</th>-->
+													<th>Número de cita</th>													
 													<th>Médicos</th>
-													<th>Especialidad</th>
-													<th>Detalle</th>
-													<th>Archivo</th>
-													<th>Acción</th>
+													<th>Especialidad</th>												
 													
 													<!--<th style="width: 2%" align="center">Acción</th>-->
 												</tr>
@@ -361,7 +358,7 @@ $id=$_SESSION['id'];
 													?>
 									
 									<tr>
-										<!--<td><?php // echo $va['codcit'];?></td>-->
+										<td><?php echo $row['codcit'];?></td>										
 										<td><?php echo $row['nombre']; ?> &nbsp;<?php echo $row['apellido']; ?></td>																		
 										<td><?php echo $row ['nombrees'];?></td>
 										<!--<td><?php // echo $row ['decripcion'];?></td>-->
@@ -385,8 +382,8 @@ $id=$_SESSION['id'];
 									</td>
                               		<td>
 									  	
-									  <button class="btn btn-primary" type="submit">Guardar</button>
-										<!--<div class="form-button-action">		glyphicon .glyphicon-download											
+									  <!--<button class="btn btn-primary" type="submit">Guardar</button>
+										x<div class="form-button-action">		glyphicon .glyphicon-download											
 											<button href="#deleteRowModal=<?php // echo $row['codcit'];?>" class="btn btn-link btn-danger btn-lg" data-toggle="modal"  title="" data-original-title="Delete Task" data-target="#deleteRowModal<?php // echo $row['codcit']; ?>">
 												<i class="fa fa-trash"></i>						
 											</button>													
