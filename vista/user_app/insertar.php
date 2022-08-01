@@ -12,9 +12,9 @@ $nombrem = $_POST["nombrem"];
 $apellido = $_POST["apellido"];
 $descripcion = $_POST["descripcion"];
 $fecha = $_POST["fecha"];
-echo $codpaci=$_SESSION['id']; 
+$codpaci=$_SESSION['id']; 
 //echo "$codpaci". $_SESSION["codpaci"];  
-echo $nombrep=$_SESSION['nombre'];  
+$nombrep=$_SESSION['nombre'];  
 
 if ($_FILES["archivo"]) {
     $nombre_base = basename($_FILES["archivo"]["name"]);
