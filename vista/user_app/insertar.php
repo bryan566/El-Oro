@@ -7,7 +7,7 @@ $conexion = mysqli_connect("localhost", "root", "", "el oro");
 
 //$database = new Connection();
 //$db = $database->open();
-<?php  echo ucfirst($_SESSION['nombre']); ?><br>
+
 $nombrem = $_POST["nombrem"];
 $apellido = $_POST["apellido"];
 $descripcion = $_POST["descripcion"];
