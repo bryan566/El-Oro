@@ -12,11 +12,11 @@ $fecha = $_POST["fecha"];
 if ($_FILES["archivo"]) {
     $nombre_base = basename($_FILES["archivo"]["name"]);
     $nombre_final = date("m-d-y") . "-" . date("H-i-s") . "-" . $nombre_base;
-    $ruta = "examenes_pacientes/" . $nombre_final;
+    $ruta = "archivo/" . $nombre_final;
     $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
 
     if ($subirarchivo) {
-        $insertar = "INSERT INTO examenes(nombre,apellido,descripcion,fecha,archivo) VALUES ('$nombre', '$apellido', '$descripcion', '$fecha', '$ruta')";
+        $insertar = "INSERT INTO examen (nombre,apellido,descripcion,fecha,archivo) VALUES ('$nombre', '$apellido', '$descripcion', '$fecha', '$ruta')";
         $resultado = mysqli_query($conexion, $insertar);
 
         if ($resultado) {
