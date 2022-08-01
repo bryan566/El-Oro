@@ -24,7 +24,7 @@
 								<div class="col-sm-12">
 									<div class="form-group form-group-default">
 										<label for="" class="" >Nombre del Médico</label>
-										<input name="nombre" type="text" class="form-control" required>
+										<input name="nombrem" type="text" class="form-control" required>
 
 									</div>
 								</div>
