@@ -20,8 +20,8 @@ class Modelo{
     public function  insertar(Modelo $data){
     try {
       //$query="INSERT INTO customers (dnipa,nombrep,apellidop,seguro,tele,sexo,usuario,password,estado)VALUES(?,?,?,?,?,?,?,?,?)";
-      $query="INSERT INTO paciente (cedula,nombrep,apellidop,sexo,telefono,correo,direccion,ciudad,archivo,usuario,password,estado)VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
-
+      $query="INSERT INTO paciente (cedula,nombrep,apellidop,sexo,telefono, fechanaci,correo,direccion,ciudad,usuario,usuario,password,cargo,estado)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      
       $this->db->prepare($query)->execute(array($data->nombrees));
 
     }catch (Exception $e) {
