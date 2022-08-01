@@ -7,7 +7,7 @@
 			<div class="modal-header">
 
 				<center>
-					<h4 class="modal-title" id="myModalLabel">Registro de Pacientes</h4>
+					<h4 class="modal-title" id="myModalLabel">Registro para subir Exámenes</h4>
 				</center>
 			</div>
 			<div class="modal-body">
@@ -23,14 +23,14 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group form-group-default">
-										<label for="" class="" >Nombre</label>
+										<label for="" class="" >Nombre del Médico</label>
 										<input name="nombre" type="text" class="form-control" required>
 
 									</div>
 								</div>
 								<div class="col-md-6 pr-0">
 									<div class="form-group form-group-default">
-										<label for="">Apellido</label>
+										<label for="">Apellido del Médico</label>
 										<input name="apellido" type="text" class="form-control" required>
 
 
@@ -38,7 +38,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-group form-group-default">
-										<label for="">Descripción</label>
+										<label for="">Descripción del archivo</label>
 										<input name="descripcion" type="text" class="form-control" required>
 									</div>
 								</div>
