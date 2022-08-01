@@ -12,8 +12,8 @@ if(isset($_POST['agregar'])){
 		//</span>
 		echo $fechaAct=  date("Y-m-d H:i:s"); 
 
-		$stmt = $db->prepare("INSERT INTO especialidad (nombrees, descripcion,usu_registro, estado) VALUES (:nombrees, :descripcion, :usu_registro :naciona )");	
-	 	$_SESSION['message'] = ( $stmt->execute(array(':nombrees' => $_POST['nombrees'], ':descripcion' => $_POST['descripcion'], ':usu_registro' => $_POST['usu_registro'], ':naciona'=>$_POST['naciona']  ) ) ) ? 'Guardado correctamente' : 'Algo salió mal. No se puede agregar';	
+		$stmt = $db->prepare("INSERT INTO especialidad (nombrees, descripcion,usu_registro, estado) VALUES (:nombrees, :descripcion, :usu_registro, :naciona, :estado )");	
+	 	$_SESSION['message'] = ( $stmt->execute(array(':nombrees' => $_POST['nombrees'], ':descripcion' => $_POST['descripcion'], ':usu_registro' => $_POST['usu_registro'], ':naciona'=>$_POST['naciona'], ':estado' => $_POST['estado']  ) ) ) ? 'Guardado correctamente' : 'Algo salió mal. No se puede agregar';	
 	
 	}
 	catch(PDOException $e){

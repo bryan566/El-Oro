@@ -40,7 +40,7 @@
 						<div class="col-md-6">
 							<div class="form-group form-group-default">
 								<label>Estado</label>
-								<select class="form-control" name="estado" value="<?php echo $va['estado']; ?>">
+								<select class="form-control" name="estado" value="<?php echo $row['estado']; ?>">
 									<option value="activo"> Activo </option>
 									<option value="inactivo"> Inactivo</option>
 								</select>
