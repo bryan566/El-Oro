@@ -2,8 +2,8 @@
 session_start();
 $conexion = mysqli_connect("localhost", "root", "", "el oro");
 
-include_once('../config/dbconect.php');
-include_once('../vista/config/dbconect.php');
+//include_once('../config/dbconect.php');
+//include_once('../vista/config/dbconect.php');
 
 //$database = new Connection();
 //$db = $database->open();
@@ -23,7 +23,7 @@ if ($_FILES["archivo"]) {
     $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
 
     if ($subirarchivo) {
-        $insertar = "INSERT INTO examen (nombre,apellido,descripcion,codpaci,nombrep,fecha,archivo) VALUES ('$nombre', '$apellido', '$descripcion','$codpaci', '$nombrep', '$fecha', '$ruta')";
+        $insertar = "INSERT INTO examen(nombre,apellido,descripcion,codpaci,nombrep,fecha,archivo) VALUES ('$nombre', '$apellido', '$descripcion','$codpaci', '$nombrep', '$fecha', '$ruta')";
         $resultado = mysqli_query($conexion, $insertar);
 
         if ($resultado) {
@@ -35,6 +35,6 @@ if ($_FILES["archivo"]) {
     }
 }
 
-//header('location: ../../folder/examen.php');
+header('location: ../../folder/examen.php');
 
 ?>
