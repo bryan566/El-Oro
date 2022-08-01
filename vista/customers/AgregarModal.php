@@ -91,7 +91,7 @@
 									</div>
 								</div>
 
-								<input type="file" name="archivo" class="form__file" required>
+								<!--<input type="file" name="archivo" class="form__file" required>-->
 
 							</div>
 
