@@ -8,7 +8,33 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="/assets/examenes/estilos.css">
+	
+
+	<style>
+		*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.form-register{
+    width: 95%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+}
+.form__title{
+    margin-top: 0;
+    font-size: 1.7em;
+    text-align: center;
+}
+	</style>
 	
 </head>
 
