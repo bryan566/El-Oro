@@ -35,6 +35,6 @@ if ($_FILES["archivo"]) {
     }
 }
 
-//header('location: ../../folder/examen.php');
+
 
 ?>
