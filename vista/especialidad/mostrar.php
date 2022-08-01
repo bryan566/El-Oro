@@ -279,17 +279,19 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 															<td><?php echo $row['fecha_mod']; ?></td>
 															<td><?php echo $row['usu_registro']; ?></td>
 															<td><?php echo $row['usu_mod']; ?></td>
-															<!--<td><?php // echo $row['estado']; 
-																	?></td>-->
-															<td><?php if ($row['estado'] == 1) {
-																	echo "activo";
-																}
-																if ($row['estado'] == 0) {
-																	echo "Inactivo";
-																}
 
-																?></td>
+															<td>
+																<?php if ($va['estado'] == 1) { ?>
+																	<form method="get" action="javascript:activo('<?php echo $va['coddoc']; ?>')">
+																		<button type="submit" class="btn btn-success btn-xs">Activo</button>
+																	</form>
+																<?php  } else { ?>
 
+																	<form method="get" action="javascript:inactivo('<?php echo $va['coddoc']; ?>')">
+																		<button type="submit" class="btn btn-danger btn-xs">Inactivo</button>
+																	</form>
+																<?php  } ?>
+															</td>
 
 															<td>
 																<div class="form-button-action">
@@ -444,7 +446,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1) {
 		$descripcion = $_POST['descripcion'];
 		$usu_registro = $_POST['usu_registro'];
 		$naciona = $_POST['naciona'];
-		
+
 		//$estado=$_POST['estado'];
 
 		// Realizamos la consulta para saber si coincide con uno de esos criterios
