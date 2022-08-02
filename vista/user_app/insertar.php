@@ -32,7 +32,7 @@ if($_FILES["archivo"]) {
 
 
 
-<?php/*
+<?php /*
 session_start();
 $conexion = mysqli_connect("localhost", "root", "", "el oro");
 
